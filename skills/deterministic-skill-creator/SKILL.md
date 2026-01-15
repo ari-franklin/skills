@@ -152,7 +152,7 @@ The following fields may be empty arrays: `out_of_scope`, `assumptions`,
   "one_sentence_job": "One sentence describing the end-to-end job.",
   "when_to_use": "A user request that should trigger this skill.",
   "out_of_scope": ["..."],
-  "proposed_folder_path": ".opencode/skills/<skill_name>/SKILL.md",
+  "proposed_folder_path": "<skill_name>/SKILL.md",
   "assumptions": ["..."],
   "open_questions": [
     {
@@ -162,6 +162,7 @@ The following fields may be empty arrays: `out_of_scope`, `assumptions`,
     }
   ],
   "generated_skill_md": "FULL CONTENTS OF SKILL.md AS A STRING",
+  "formatted_output_md": "FULL CONTENTS OF THE GENERATED SKILL FILE AS MARKDOWN, WITH A HEADER INDICATING THE TARGET PATH (e.g., '# <skill_name>/SKILL.md')",
   "audit": {
     "ready_to_ship": true,
     "blocking_issues": ["..."],
