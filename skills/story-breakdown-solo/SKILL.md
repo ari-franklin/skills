@@ -2,8 +2,8 @@
 name: story-breakdown
 description: >
   Decomposes large chunks of work into explicit stories, spikes, and chores,
-  applies type-aware readiness rules, and returns GO / NO-GO status
-  for planning and delivery. Allows gating on status, confidence, and work_type
+  applies type-aware readiness rules, and returns GO / NO_GO verdicts for planning
+  and delivery. Allows gating on verdict, confidence, and work_type
 metadata:
   version: 0.2.0
   tags:
@@ -19,12 +19,12 @@ metadata:
 ### Goal
 Take a messy chunk of work (initiative/epic/story dump) and produce:
 1) a **deterministic decomposition** into explicit work items, and
-2) **type-aware readiness evaluation** (GO / NO-GO) per item,
+2) **type-aware readiness evaluation** (GO / NO_GO) per item,
 3) **conditional output schemas** per work_type, with value-first user stories and Gherkin AC.
 
 You are both:
 - a **formatter** (break big work into multiple explicit items), and
-- a **judge** (type-aware readiness + GO/NO-GO gating).
+- a **judge** (type-aware readiness + GO/NO_GO gating).
 
 ---
 
@@ -81,9 +81,9 @@ This classification MUST happen before readiness evaluation. No exceptions.
 ### Step 3: Apply type-aware readiness rules and create conditional output
 For EACH item:
 1) generate the type-specific output shape (schema below)
-2) decide `Status` = `GO` or `NO-GO` using the type-specific logic
-3) list blockers that make it `NO-GO` (capture in the JSON output)
-4) list `open_questions` and `assumptions` (capture in the JSON output)
+2) decide `verdict` = `GO` or `NO_GO` using the type-specific logic
+3) list `blocking_issues` (only the items that make it NO_GO)
+4) list `open_questions` and `assumptions`
 
 Do NOT invent details to achieve `GO`.
 Prefer explicit “unknown” + a good question.
@@ -91,139 +91,43 @@ Prefer explicit “unknown” + a good question.
 ---
 
 ## Output
-Produce one output and nothing else:
-- A single JSON object written to `features.json` in the parent folder of this `SKILL.md`.
+Schema examples below are illustrative.
+Final output must conform structurally but must not include comments or documentation strings.
+Return a single JSON object and nothing else (no prose, no Markdown).
+Do not include fields that are not valid JSON keys.
 
-### Output rules (MANDATORY)
-- Return only JSON in the response, no extra commentary.
-- Write the same JSON to `features.json` (parent folder of this `SKILL.md`).
-- Preserve this ordering in the JSON: delivery work, learning spikes, enablement/chores, suggested execution order, key dependencies, risks, assumptions, blockers, open questions.
-- If a section has no items, use an empty array.
-- Do NOT surface assumptions or blockers inline unless they block execution; capture full detail in the JSON lists.
+Top-level output:
 
-### Taskmaster Execution Principles (handoff)
-- Apply TDD by default: derive tests from acceptance criteria before implementing.
-- Implement the smallest change to make tests pass; refactor only after tests are green.
-- Treat failing or missing tests as a stop condition until resolved.
-- Taskmaster should only pick up items where `readiness_status` is `GO` and `execution_status` is `not done`.
-
-### Output JSON structure: features.json
-Output valid JSON only, no commentary. Structure:
 {
-  "delivery_work": [
-    {
-      "id": "US-1",
-      "title": "<TL;DR line>",
-      "work_type": "user_story",
-      "purpose": "...",
-      "user_value": {
-        "direct_user": "...",
-        "goal": "...",
-        "benefit": "..."
-      },
-      "depends_on": ["..."],
-      "readiness_status": "GO | NO-GO",
-      "execution_status": "not done | Done",
-      "definition_of_done": "...",
-      "acceptance_criteria": [
-        "Scenario: <name>\nGiven ...\nWhen ...\nThen ..."
-      ],
-      "edge_cases": ["..."],
-      "notes": ["..."]
-    }
-  ],
-  "learning_spikes": [
-    {
-      "id": "SP-1",
-      "title": "<TL;DR line>",
-      "work_type": "spike",
-      "learning_goal": "...",
-      "questions_to_answer": ["..."],
-      "investigation_plan": ["..."],
-      "expected_artifacts": ["..."],
-      "time_box": "...",
-      "exit_criteria": ["..."],
-      "follow_on_work": [
-        { "type": "user_story|chore", "title": "...", "why": "..." }
-      ],
-      "definition_of_done": "...",
-      "depends_on": ["..."],
-      "status": "GO | NO-GO",
-      "notes": ["..."]
-    }
-  ],
-  "enablement_chores": [
-    {
-      "id": "CH-1",
-      "title": "<TL;DR line>",
-      "work_type": "chore",
-      "purpose": "...",
-      "tasks": [
-        { "task": "...", "done_when": "..." }
-      ],
-      "definition_of_done": "...",
-      "depends_on": ["..."],
-      "status": "GO | NO-GO",
-      "notes": ["..."]
-    }
-  ],
-  "suggested_execution_order": ["US-1", "SP-1", "CH-1"],
-  "key_dependencies": ["..."],
-  "risks": [
-    { "item": "US-1", "risk": "...", "impact": "Low|Med|High", "mitigation": "..." }
-  ],
-  "assumptions": [
-    { "item": "US-1", "assumption": "..." }
-  ],
-  "blockers": [
-    { "item": "US-1", "theme": "PM|Design|Eng|Data/Integrations", "blocker": "..." }
-  ],
+  "required_fields": ["summary", "assumptions", "open_questions", "items"],
+  "summary": "1–3 sentences describing what you decomposed and how many items were produced",
+  "assumptions": ["..."],
   "open_questions": [
-    { "question": "...", "owner": "...", "unlocks": "..." }
+    { "question": "...", "why_it_matters": "...", "suggested_owner": "PM|Eng|Design|Data|Security|Other" }
+  ],
+  "items": []
+}
+
+### Common fields (present on EVERY item)
+Every item object MUST include:
+
+{
+  "required_fields": ["id", "work_type", "title", "context", "dependencies", "risks", "verdict", "confidence", "blocking_issues", "assumptions", "open_questions"],
+  "id": "short-stable-id-like-1-1 or A1",
+  "work_type": "user_story|spike|chore",
+  "title": "...",
+  "context": "ELI5 why this matters (1–3 sentences). If unknown, say so.",
+  "dependencies": ["..."],
+  "risks": [{ "risk": "...", "impact": "Low|Med|High", "mitigation": "..." }],
+  "verdict": "GO|NO_GO",
+  "confidence": 0.0,
+  "blocking_issues": ["..."],
+  "reclassification_notes": "optional; include only if applicable",
+  "assumptions": ["..."],
+  "open_questions": [
+    { "question": "...", "why_it_matters": "...", "suggested_owner": "PM|Eng|Design|Data|Security|Other" }
   ]
 }
-
-Example status update (after execution):
-{
-  "delivery_work": [
-    {
-      "id": "US-1",
-      "title": "Example title",
-      "work_type": "user_story",
-      "purpose": "Example purpose",
-      "user_value": {
-        "direct_user": "Developer",
-        "goal": "Example goal",
-        "benefit": "Example benefit"
-      },
-      "depends_on": [],
-      "readiness_status": "GO",
-      "execution_status": "Done",
-      "definition_of_done": "Example DoD",
-      "acceptance_criteria": [
-        "Scenario: Example\nGiven ...\nWhen ...\nThen ..."
-      ],
-      "edge_cases": [],
-      "notes": []
-    }
-  ],
-  "learning_spikes": [],
-  "enablement_chores": [],
-  "suggested_execution_order": ["US-1"],
-  "key_dependencies": [],
-  "risks": [],
-  "assumptions": [],
-  "blockers": [],
-  "open_questions": []
-}
-
-### Common item requirements
-Every item MUST include:
-- A short, stable id (e.g., "US-1", "SP-2", "CH-3")
-- Work type (user story, spike, or chore)
-- A human TL;DR line
-- Purpose, User Value, Depends On, Status
-- Risks, assumptions, blockers, and open questions captured in the JSON output
 
 ---
 
@@ -255,8 +159,8 @@ User story readiness rules (GO only if ALL true):
 	- No blocking unknowns remain.
 
 If it fails:
-- `Status = NO-GO`
-- Put the failed bullets into the `blockers` list in the JSON output.
+- `verdict = NO_GO`
+- Put the failed bullets into `blocking_issues`.
 - consider whether a `spike` is the appropriate follow-on work.
 
 ---
@@ -282,7 +186,7 @@ Spike readiness rules (GO only if ALL true):
 - Exit criteria are explicit and verifiable (knowledge/decision, not “code merged”).
 - Follow-on work is identified (even if tentative).
 
-If the spike describes building the feature as the outcome, it is NOT a spike → reclassify or NO-GO.
+If the spike describes building the feature as the outcome, it is NOT a spike → reclassify or NO_GO.
 
 ---
 
@@ -306,15 +210,10 @@ If it claims direct user-visible value as the primary rationale, consider reclas
 
 ---
 
-## Status (type-aware, per item)
-Set `Status` per item:
+## GO / NO_GO (type-aware, per item)
+Set `verdict` per item:
 - `GO` if all readiness rules for that work_type pass.
-- `NO-GO` if any blocking rule fails.
-
-Execution update rule (JSON only):
-- Set the default `execution_status` in `features.json` to `not done` for all delivery items.
-- After a delivery item is executed and all acceptance criteria are met, update its `execution_status` in `features.json` to `Done`.
-- Do not start the next delivery item until the current one is marked `Done` in `features.json`.
+- `NO_GO` if any blocking rule fails.
 
 Confidence guidance:
 - 0.8–1.0: clear, testable, minimal unknowns
