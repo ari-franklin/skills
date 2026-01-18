@@ -1,2 +1,9 @@
 # Macos
 .DS_Store
+
+/skills/implementation-plan-copy/
+/skills/story-slicer-tasker/.taskmaster/tasks/tasks.json
+/.taskmaster/tasks/tasks.json
+/plans/
+/prd_example.txt
+/skills/story-slicer-tasker/.taskmaster/templates/*.txt
