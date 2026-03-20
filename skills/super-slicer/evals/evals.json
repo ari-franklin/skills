@@ -1,0 +1,23 @@
+{
+  "skill_name": "story-slicer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Break this idea into Jira stories: customers can save items for later in checkout, see that list across devices, and move items back into the cart when they are ready to buy.",
+      "expected_output": "A vertical-slice story set that starts from customer outcomes, sequences thin end-to-end slices, avoids frontend/backend/database task stories, and produces Jira-ready stories with acceptance criteria, out-of-scope boundaries, and suggested sizes.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need stories for adding manager approval to refunds. My initial breakdown is: build refund approval API, add DB table, add UI modal, add audit logging. Rewrite this into proper Jira stories.",
+      "expected_output": "A rewritten backlog that rejects the horizontal technical-task framing, groups work into customer- or operator-visible vertical stories, identifies any true enabling chores/spikes separately, and explains the slicing rationale.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Turn this design into stories: store associates need to look up a customer's online order in-store, view fulfillment status, and resend a pickup barcode if the customer can't find it. We are not sure whether the current order service exposes barcode regeneration yet.",
+      "expected_output": "A story set that separates clear value slices from uncertainty, creates Jira-ready customer-facing stories first, and identifies a spike only for the unresolved barcode-regeneration capability.",
+      "files": []
+    }
+  ]
+}
