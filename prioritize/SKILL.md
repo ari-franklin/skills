@@ -1,6 +1,6 @@
 ---
 name: prioritize
-description: Rigorously prioritize product problems, initiatives, and work items using approved memory, evidence quality checks, Eisenhower-style importance vs urgency framing, and lean outcome-oriented judgment. Use when deciding what matters now, ranking strategic problems before initiatives and tasks, or explaining prioritization tradeoffs with evidence.
+description: Rigorously prioritize product outcomes, initiatives, and bets using approved memory, evidence quality checks, Eisenhower-style importance vs urgency framing, and lean outcome-oriented judgment. Use when deciding what matters now, ranking strategic outcomes before initiatives and tactical bets, or explaining prioritization tradeoffs with evidence.
 ---
 
 # Prioritize Product Work
@@ -11,7 +11,7 @@ Transform approved product memory into an explicit, defensible prioritization.
 
 Do not begin with tasks.
 
-Prioritization starts by determining which problems matter most, then which initiatives best address those problems, then which work items best advance those initiatives.
+Prioritization starts by determining which outcomes matter most, then which initiatives best address those outcomes, then which bets best advance those initiatives.
 
 The goal is not to produce a neat list. The goal is to improve the quality of product judgment by separating:
 
@@ -79,13 +79,29 @@ Use this to distinguish:
 
 ## Required Order
 
-Always rank in this order:
+Always reason in this order:
 
 1. `problems`
 2. `initiatives`
 3. `work_items`
 
 Never let a task outrank the significance of the underlying problem.
+
+User-facing horizon labels:
+
+- `outcome` -> backed by `problem`
+- `initiative` -> backed by `initiative`
+- `bet` -> backed by `work_item`
+
+Default horizon:
+
+- `bet`
+
+Optional horizons:
+
+- `initiative`
+- `outcome`
+- `full`
 
 ## Procedure
 
@@ -174,18 +190,20 @@ Every override must state:
 
 ### Phase 7: Produce Output
 
-Return separate ranked views for:
+Return output for the requested horizon.
 
-- problems
-- initiatives
-- work items
+Default to `bet` unless the user explicitly asks for a different horizon.
 
-Each item should include:
+In the default `bet` view, each item should include:
 
 - rank
-- title
-- why it matters
+- bet
+- linked initiative
+- linked outcome
+- causal chain
 - why now
+- success signal
+- suggested time horizon
 - confidence
 - evidence used
 - what would change the ranking
@@ -195,26 +213,14 @@ Each item should include:
 Use this structure unless the user asks for a different one:
 
 ```text
-PROBLEMS
+BETS
 1. ...
-Why it matters:
+Linked initiative:
+Linked outcome:
+Causal chain:
 Why now:
-Confidence:
-Evidence:
-What would change this ranking:
-
-INITIATIVES
-1. ...
-Why it matters:
-Why now:
-Confidence:
-Evidence:
-What would change this ranking:
-
-WORK ITEMS
-1. ...
-Why it matters:
-Why now:
+Success signal:
+Suggested time horizon:
 Confidence:
 Evidence:
 What would change this ranking:
