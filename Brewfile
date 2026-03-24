@@ -1,0 +1,2 @@
+brew "stow"
+cask "codex"
