@@ -1,250 +1,211 @@
 ---
 name: prioritize
-description: Rigorously prioritize product outcomes, initiatives, and bets using approved memory, evidence quality checks, Eisenhower-style importance vs urgency framing, and lean outcome-oriented judgment. Use when deciding what matters now, ranking strategic outcomes before initiatives and tactical bets, or explaining prioritization tradeoffs with evidence.
+description: Rigorously prioritize outcomes, initiatives, options, and bets using evidence gates, problem-first ranking, confidence grading, and explicit override logic. Use when deciding what matters now, what should wait, or what deserves the next concentrated push.
 ---
 
-# Prioritize Product Work
+# Prioritize
 
-Transform approved product memory into an explicit, defensible prioritization.
+Turn a messy set of choices into a defensible priority call.
 
-## Philosophy
+## Purpose
 
-Do not begin with tasks.
+This skill exists to improve judgment, not to produce a prettier backlog.
 
-Prioritization starts by determining which outcomes matter most, then which initiatives best address those outcomes, then which bets best advance those initiatives.
-
-The goal is not to produce a neat list. The goal is to improve the quality of product judgment by separating:
+Use it to separate:
 
 - importance from noise
 - urgency from panic
 - evidence-backed action from speculation
 - reversible learning from irreversible commitment
 
-## Invocation
+## Inputs
 
-Use this skill when the user asks things like:
+It can work from:
+
+- a user description
+- a strategy note
+- a doc or memo
+- a list of problems, initiatives, or bets
+- linked artifacts the user provides
+
+## When To Activate
+
+Use when the user asks things like:
 
 - "What should we prioritize?"
 - "What matters most right now?"
-- "How should I rank these problems?"
-- "Which initiative should we push first?"
-- "What should I do next and why?"
+- "Which of these should move first?"
+- "What should we do next?"
+- "How would you rank these options?"
 
-## Core Model
+## Priority Model
 
-This skill uses a semi-structured blend of:
+This skill uses four judgment dimensions:
 
-- `importance`
-- `urgency`
-- `confidence`
-- `effort / reversibility`
+1. `importance`
+2. `urgency`
+3. `confidence`
+4. `effort / reversibility`
 
-The top-level frame is Eisenhower-style:
+`importance` and `urgency` drive the ranking.
 
-- importance
-- urgency
+`confidence` determines how hard the skill is allowed to lean on the ranking.
 
-But these axes must be earned through product reasoning, not intuition.
+`effort / reversibility` is a modifier, not the main axis.
 
-### Importance is informed by:
+## Readiness Gates
 
-- customer pain severity
-- outcome impact
-- strategic relevance
-- metric consequence
+Do not rank immediately. Clear these gates first.
 
-### Urgency is informed by:
+### Gate 1: Scope Is Comparable
+
+Determine whether the user is comparing:
+
+- outcomes or problems
+- initiatives or options
+- bets or concrete actions
+- a mixed set
+
+If the set is mixed, normalize it into separate ranked views or an explicit causal chain before ranking.
+
+### Gate 2: Evidence Exists
+
+For each candidate, assess evidence quality:
+
+- `strong`: recent, specific, consistent, decision-useful
+- `moderate`: directional but incomplete
+- `weak`: stale, thin, contradictory, or mostly asserted
+
+If most candidates are `weak`, do not fake a confident ranking. Return an evidence-gapped prioritization instead.
+
+### Gate 3: The Decision Frame Is Clear
+
+Establish:
+
+- what decision must be made
+- by whom
+- on what time horizon
+- with what constraints
+
+If this is unclear, state the assumed frame before ranking.
+
+## Operating Sequence
+
+### Phase 1: Build The Candidate Set
+
+List the candidates and place each at the correct horizon:
+
+- `outcome`
+- `initiative`
+- `bet`
+
+Default to the horizon the user actually needs. If unclear, prefer the most immediate decision horizon.
+
+### Phase 2: Grade Evidence
+
+For each candidate, note:
+
+- evidence quality
+- recency
+- contradiction level
+- confidence implication
+
+If evidence is too weak, lower confidence or stop at an evidence-gapped result.
+
+### Phase 3: Rank Importance
+
+Assess:
+
+- customer or user significance
+- business or strategic consequence
+- metric or outcome consequence
+- downside of ignoring it
+
+### Phase 4: Rank Urgency
+
+Assess:
 
 - cost of delay
 - time sensitivity
 - compounding risk of inaction
 - dependency pressure
 
-### Confidence is informed by:
+### Phase 5: Apply Confidence And Reversibility
 
-- evidence strength
-- evidence recency
-- consistency across memory
-- contradiction level
+Adjust the ranking with:
 
-### Effort and reversibility are:
+- confidence in the evidence
+- reversibility of the move
+- learning value of a small bet
+- risk of a large irreversible commitment
 
-- a modifier
-- not the main driver
+### Phase 6: Apply Override Log
 
-Use this to distinguish:
-
-- small, reversible learning bets
-- large, irreversible commitments
-
-## Required Order
-
-Always reason in this order:
-
-1. `problems`
-2. `initiatives`
-3. `work_items`
-
-Never let a task outrank the significance of the underlying problem.
-
-User-facing horizon labels:
-
-- `outcome` -> backed by `problem`
-- `initiative` -> backed by `initiative`
-- `bet` -> backed by `work_item`
-
-Default horizon:
-
-- `bet`
-
-Optional horizons:
-
-- `initiative`
-- `outcome`
-- `full`
-
-## Procedure
-
-### Phase 1: Load Scope
-
-Read canonical memory first. Gather:
-
-- relevant problems
-- linked initiatives
-- linked work items
-- relevant metrics
-- decisions
-- assumptions
-- constraints
-
-Prefer approved memory over raw inputs. Pull raw artifacts only if memory is clearly insufficient.
-
-### Phase 2: Evidence Quality Check
-
-Before ranking anything, assess:
-
-- recency
-- completeness
-- contradiction
-- confidence
-
-If evidence is weak:
-
-- say so explicitly
-- lower confidence in the ranking
-- do not fake certainty
-
-### Phase 3: Rank Problems
-
-For each problem, assess:
-
-- pain severity
-- outcome or metric impact
-- strategic relevance
-- cost of delay
-- risk of inaction
-- evidence strength
-
-Then place each problem in an importance-urgency frame and create a provisional ranking.
-
-### Phase 4: Rank Initiatives
-
-For each initiative, assess:
-
-- directness of connection to top problems
-- expected leverage
-- time to value
-- feasibility
-- dependencies
-- reversibility
-
-Then rank initiatives relative to the highest-priority problems.
-
-### Phase 5: Rank Work Items
-
-For each work item, assess:
-
-- connection to top initiatives
-- whether it is a critical unblocker
-- whether it materially reduces delay or risk
-- whether it is a small, high-learning move
-
-Then rank work items relative to the highest-priority initiatives.
-
-### Phase 6: Apply Judgment Overrides
-
-Override the procedural ranking only when justified.
+Override the procedural order only when justified.
 
 Typical reasons:
 
-- a serious risk must move up despite imperfect evidence
-- a small reversible bet has unusually high learning value
-- stakeholder pressure is inflating urgency without customer importance
-- a large irreversible commitment is ranked too high for the available evidence
+- stakeholder pressure inflated urgency without real importance
+- a small, reversible bet has unusually high learning value
+- a serious risk deserves elevation despite imperfect evidence
+- an irreversible move is too high for the confidence level
 
 Every override must state:
 
 - what changed
 - why it changed
-- what evidence supports the override
+- what evidence justified the override
 
-### Phase 7: Produce Output
+### Phase 7: Produce The Priority Call
 
-Return output for the requested horizon.
+Return one of these outcome types:
 
-Default to `bet` unless the user explicitly asks for a different horizon.
+- `ranked`: evidence strong enough to order confidently
+- `conditional`: ranking depends on one or two unresolved assumptions
+- `evidence-gapped`: not enough signal for a responsible ordering
 
-In the default `bet` view, each item should include:
+## Output Contract
 
-- rank
-- bet
-- linked initiative
-- linked outcome
-- causal chain
-- why now
-- success signal
-- suggested time horizon
-- confidence
-- evidence used
-- what would change the ranking
-
-## Output Format
-
-Use this structure unless the user asks for a different one:
+Use this structure unless the user asks for another format:
 
 ```text
-BETS
-1. ...
-Linked initiative:
-Linked outcome:
-Causal chain:
-Why now:
-Success signal:
-Suggested time horizon:
-Confidence:
+DECISION FRAME
+...
+
+READINESS
+Scope:
 Evidence:
-What would change this ranking:
+Confidence:
+
+RANKED VIEW
+1. ...
+Why it matters:
+Why now:
+Confidence:
+Evidence used:
+What would reorder this:
+
+OVERRIDE LOG
+- ...
+
+BOTTOM LINE
+...
 ```
+
+## Guardrails
+
+1. Do not let tasks outrank the significance of the underlying problem.
+2. Do not convert weak evidence into false precision.
+3. Do not use effort as the main ranking axis.
+4. Keep tactical priorities tied to strategic consequence.
+5. If the right answer is "do not prioritize yet," say that directly.
 
 ## Failure Modes
 
 Watch for:
 
-- ranking work items before validating the problem
-- confusing loud stakeholder demand with real customer importance
-- over-weighting urgency when evidence is weak
-- using effort as the primary ranking axis
-- hiding ambiguity behind a falsely precise list
-
-## Judgment Standard
-
-Act like a strong product leader, not a backlog sorter.
-
-The output should be:
-
-- evidence-backed
-- strategically coherent
-- explicit about uncertainty
-- clear about tradeoffs
-
-If the memory is too weak to prioritize responsibly, say that directly and identify what is missing.
+- ranking the loudest item first
+- confusing urgency with anxiety
+- over-trusting a neatly formatted but weak candidate list
+- treating reversibility as trivial when the blast radius is high
+- collapsing a strategic decision into backlog ordering

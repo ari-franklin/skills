@@ -1,170 +1,184 @@
 ---
 name: decompose
-description: Rigorously decompose product outcomes and initiatives into leverage points, workstreams, hypotheses, and bets using lens-aware reasoning. Use when breaking down an outcome into opportunities and initiatives, or an initiative into workstreams and bets, especially when multiple decomposition frames are plausible.
+description: Methodically break a goal, outcome, initiative, or problem into leverage points, workstreams, hypotheses, and bets using explicit lens selection, ambiguity checks, and decomposition stress tests. Use when a large piece of product work needs structure without collapsing straight into tasks.
 ---
 
-# Decompose Product Work
+# Decompose
 
-Turn an `outcome` or `initiative` into a structured breakdown that preserves product logic instead of collapsing directly into tasks.
+Turn a large piece of work into a usable structure without losing the logic.
 
-## Philosophy
+## Purpose
 
 Decomposition is not just making a big thing smaller.
 
-Good decomposition chooses the right framing for where leverage lives, then breaks the object into coherent parts that improve strategy and execution.
+Good decomposition finds the right structure for the problem:
 
-This skill should not:
+- where leverage actually lives
+- what branches are meaningfully different
+- what is still unknown
+- what should stay open versus what can become action
 
-- jump from outcomes to tasks
-- decompose by org chart when causal structure matters more
-- flatten discovery-heavy work into delivery checklists
-- pretend one breakdown is obviously correct when ambiguity is high
+## Inputs
 
-## Invocation
+It can start from:
 
-Use this skill when the user asks things like:
+- a goal
+- an outcome
+- a problem
+- an initiative
+- a strategy statement
+- a user-provided description of work that feels too large or blurry
 
-- "Break this outcome down"
-- "How should we decompose this initiative?"
-- "What are the workstreams here?"
-- "What are the main levers?"
+## When To Activate
+
+Use when the user asks things like:
+
+- "Break this down"
+- "How should we structure this work?"
+- "What are the main levers here?"
+- "What are the workstreams?"
 - "How do we turn this into actionable bets?"
 
-## Supported Starting Objects
+## Core Rule
 
-### Outcome
+Do not jump from a fuzzy objective to tasks.
 
-Default path:
-
-`outcome -> opportunities/levers -> initiatives`
-
-### Initiative
-
-Default path:
-
-`initiative -> workstreams + hypotheses/experiments -> bets`
+If the target is under-defined, fix the definition first.
 
 ## Decomposition Lenses
 
-This skill supports four lenses.
+Choose a primary lens before decomposing.
 
 ### Outcome Lens
 
 Use when the key question is:
 
 - what must become true?
-- what leverage points can move the outcome?
+- what leverage points would move the result?
 
 ### Behavior Lens
 
 Use when the key question is:
 
-- what user, system, or workflow behaviors must change?
+- what users, teams, or systems must do differently?
 
 ### Structure Lens
 
 Use when the key question is:
 
-- what workstreams, systems, components, or ownership boundaries exist?
+- what workstreams, components, surfaces, or systems exist?
 
 ### Mixed Lens
 
-Use when one lens alone hides important coupling, ambiguity, or strategic tradeoffs.
+Use when one lens hides important coupling or tradeoffs.
 
-## Procedure
+## Readiness Gates
 
-### Phase 1: Load the Target
+### Gate 1: The Target Is Singular Enough
 
-Read the selected outcome or initiative plus linked memory:
+State the target in one sentence.
 
-- metrics
-- assumptions
-- decisions
-- constraints
-- linked initiatives or bets
-- evidence quality and recency
+If the sentence secretly contains multiple goals, split them before decomposing.
 
-### Phase 2: Assess Decomposition Ambiguity
+### Gate 2: The Success Direction Is Legible
 
-Check whether the object is:
+Establish:
 
-- already bounded
-- multi-causal
-- under-specified
-- tightly coupled
-- discovery-heavy or delivery-heavy
+- what better looks like
+- for whom
+- on what horizon
 
-If ambiguity is high, do not force a single decomposition path too early.
+If success direction is missing, the decomposition will drift.
 
-### Phase 3: Choose the Primary Lens
+### Gate 3: Ambiguity Is Assessed
 
-Defaults:
+Classify the target as:
 
-- from `outcome`: outcome lens
-- from `initiative`: structure + behavior mix
+- `bounded`
+- `under-specified`
+- `multi-causal`
+- `tightly coupled`
+- `discovery-heavy`
+- `delivery-heavy`
 
-If ambiguity is high, produce 2-3 plausible decomposition candidates and recommend one.
+High ambiguity changes the expected output. It should produce candidate decompositions, not one fake-clean tree.
 
-### Phase 4: Generate Candidate Decomposition
+## Operating Sequence
 
-For an `outcome`, default to:
+### Phase 1: Define The Target
 
-- outcome
-- opportunities or levers
-- recommended initiatives
+Capture:
 
-For an `initiative`, default to:
+- target
+- desired shift
+- user or system affected
+- relevant constraints
+- known dependencies
+- known unknowns
 
-- initiative
-- workstreams
-- hypotheses or experiments where relevant
-- recommended bets
+### Phase 2: Choose The Lens
 
-### Phase 5: Stress-Test the Decomposition
+Default guidance:
 
-Check whether the breakdown:
+- from a goal or outcome: start with `outcome`
+- from a problem: start with `behavior` or `outcome`
+- from an initiative: start with `structure` or `mixed`
+
+If ambiguity is high, generate 2-3 plausible lens choices and recommend one.
+
+### Phase 3: Generate Candidate Breakdown
+
+Typical patterns:
+
+- `goal/outcome -> levers -> initiatives`
+- `initiative -> workstreams -> bets`
+- `problem -> behavior shifts -> interventions`
+
+Do not force every decomposition into the same shape.
+
+### Phase 4: Stress-Test The Breakdown
+
+Check whether the decomposition:
 
 - covers the main causal paths
-- avoids premature solutioning
-- exposes important unknowns
-- is actionable enough to use
-- avoids fake completeness
+- avoids premature task collapse
+- keeps branches meaningfully distinct
+- surfaces key unknowns
+- is actionable enough to guide the next decision
 
-### Phase 6: Recommend a Path
+### Phase 5: Recommend The Working Structure
 
-If multiple candidates exist, explain:
+Choose:
 
-- why one is preferred
-- what the alternatives optimize for
-- when an alternative would be better
+- `single recommendation` when ambiguity is low
+- `recommended option plus alternatives` when ambiguity is high
 
-### Phase 7: Produce Output
+Explain what the preferred structure optimizes for.
 
-Return:
+## Output Contract
 
-- chosen decomposition
-- alternative candidates when ambiguity is high
-- rationale for the chosen lens
-- assumptions
-- unresolved questions
-- recommended next initiatives or bets
-
-## Output Format
-
-### From Outcome
+Use this structure unless the user asks for another format:
 
 ```text
-OUTCOME
+TARGET
 ...
+
+READINESS
+Target clarity:
+Success direction:
+Ambiguity:
 
 RECOMMENDED LENS
 ...
 
-OPPORTUNITIES / LEVERS
+WORKING DECOMPOSITION
 1. ...
 2. ...
 
-RECOMMENDED INITIATIVES
+WHY THIS STRUCTURE
+...
+
+ALTERNATIVES
 1. ...
 2. ...
 
@@ -173,47 +187,25 @@ ASSUMPTIONS
 
 OPEN QUESTIONS
 - ...
+
+RECOMMENDED NEXT MOVES
+1. ...
+2. ...
 ```
 
-### From Initiative
+## Guardrails
 
-```text
-INITIATIVE
-...
-
-RECOMMENDED LENS
-...
-
-WORKSTREAMS
-1. ...
-2. ...
-
-HYPOTHESES / EXPERIMENTS
-1. ...
-2. ...
-
-RECOMMENDED BETS
-1. ...
-2. ...
-
-ASSUMPTIONS
-- ...
-
-OPEN QUESTIONS
-- ...
-```
+1. Do not reduce an ambiguous objective to a fake-clean tree.
+2. Do not decompose by org chart when the logic is causal.
+3. Do not turn discovery-heavy work into delivery theater.
+4. Do not hide uncertainty just to make the structure look complete.
+5. If the target is too blurry, stop and repair the definition first.
 
 ## Failure Modes
 
 Watch for:
 
-- decomposing by ownership when the problem is causal
-- reducing an ambiguous initiative to a tidy but shallow tree
-- skipping uncertainty and assumptions
-- pretending there is only one valid decomposition lens when there are meaningful alternatives
-
-## Judgment Standard
-
-Act like a product strategist and systems thinker, not a task splitter.
-
-If the object is too ambiguous to decompose confidently, say so and show the competing decomposition candidates instead of faking certainty.
+- branching by ownership instead of leverage
+- mixing goals, solutions, and tasks in one layer
+- producing a decomposition that cannot guide a real decision
+- pretending there is one obvious lens when there are real alternatives

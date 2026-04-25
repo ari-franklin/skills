@@ -1,146 +1,182 @@
 ---
 name: validate
-description: Rigorously validate product logic chains across outcomes, initiatives, and bets using evidence quality checks, causal coherence checks, success-signal checks, and assumption review. Use when testing whether a proposed chain is sound enough to act on or when diagnosing where the logic breaks.
+description: Rigorously validate a goal-to-approach-to-action chain using evidence checks, causal coherence tests, assumption load review, and success-signal gates. Use when deciding whether an initiative, bet, or plan is sound enough to act on.
 ---
 
-# Validate Product Logic
+# Validate
 
-Validate whether a proposed product logic chain is sound enough to act on.
+Test whether the logic actually holds.
 
-## Philosophy
+## Purpose
 
-Validation is not about style or persuasion.
+Validation is not style critique and not generic skepticism.
 
-It is about checking whether the logic holds:
+It checks whether a proposed chain is sound enough to act on:
 
-- does this bet really support the initiative?
-- does this initiative really move the outcome?
+- does this action plausibly move the approach?
+- does this approach plausibly move the goal?
 - is the chain evidence-backed?
-- are the assumptions visible and defensible?
-- is success clear enough to judge?
+- are assumptions visible and healthy?
+- would success be observable if it worked?
 
-This skill exists to prevent the system from justifying weak reasoning with polished language.
+## Inputs
 
-## Invocation
+It can validate:
 
-Use this skill when the user asks things like:
+- a goal or outcome
+- an initiative, approach, or strategy
+- a bet, experiment, or action
+- a full chain such as `goal -> approach -> action`
 
-- "Validate this initiative"
-- "Does this bet actually make sense?"
-- "Is this chain coherent?"
-- "What is weak in this logic?"
-- "Are we solving the right problem?"
+## When To Activate
 
-## Supported Targets
+Use when the user asks things like:
 
-### Full Chain
+- "Does this actually make sense?"
+- "Validate this plan"
+- "Where is the logic weak?"
+- "Are we solving the right thing?"
+- "Is this chain sound enough to proceed?"
 
-Default when possible:
+## Validation Ladder
 
-`outcome -> initiative -> bet`
+Run the checks in this order:
 
-### Partial Validation
+1. `chain completeness`
+2. `evidence quality`
+3. `causal coherence`
+4. `success clarity`
+5. `assumption load`
 
-Also support validating:
+Do not skip to verdict before all five are checked.
 
-- a single outcome
-- a single initiative
-- a single bet
+## Readiness Gates
 
-But always call out missing context if the chain is incomplete.
+### Gate 1: The Claim Is Legible
 
-## Procedure
+State the object being validated and the implied claim.
 
-### Phase 1: Load the Chain
+Examples:
 
-Read the target plus linked:
+- "If we do X, Y will improve."
+- "This initiative is the right vehicle for this goal."
+- "This experiment is worth running now."
 
-- outcome
-- initiative
-- bet
-- metrics
-- assumptions
-- decisions
+If the claim is fuzzy, rewrite it before validating.
+
+### Gate 2: The Chain Shape Is Known
+
+Classify the chain as:
+
+- `complete`
+- `partial`
+- `broken`
+- `implied`
+
+Do not repair missing links silently.
+
+### Gate 3: There Is At Least Minimal Evidence
+
+Grade evidence:
+
+- `strong`
+- `moderate`
+- `weak`
+- `missing`
+
+If evidence is `missing`, the skill may still validate structure, but the verdict must be capped accordingly.
+
+## Operating Sequence
+
+### Phase 1: Load The Chain
+
+Identify the relevant:
+
+- goal or outcome
+- approach or initiative
+- action, bet, or experiment
 - evidence
+- assumptions
+- constraints
+- success signals
 
 ### Phase 2: Check Chain Completeness
 
-Determine whether the chain is:
+Ask:
 
-- fully linked
-- partially linked
-- broken
-- implied but not explicit
-
-Do not guess away missing links.
+- are the links explicit?
+- is anything implied but unstated?
+- is the action detached from the stated goal?
 
 ### Phase 3: Check Evidence Quality
 
 Assess:
 
-- strength
+- specificity
 - recency
 - consistency
 - contradiction
+- relevance to the claim
 
-Weak evidence lowers confidence in the validation result.
-
-### Phase 4: Check Strategic Coherence
+### Phase 4: Check Causal Coherence
 
 Test whether:
 
-- the initiative plausibly addresses the outcome
-- the bet plausibly advances the initiative
-- the chain reflects real causal logic rather than wishful mapping
+- the approach plausibly affects the goal
+- the action plausibly advances the approach
+- the logic is causal rather than aspirational
+- the step size is credible for the expected result
 
 ### Phase 5: Check Success Clarity
 
-Ensure the logic is clear enough to answer:
+Determine whether the user could later answer:
 
-- what observable signal would indicate this is working?
-- what would success look like here?
+- what would count as success?
+- what would count as failure?
+- what signal should move first?
 
-### Phase 6: Check Assumption Health
+### Phase 6: Check Assumption Load
 
 Look for:
 
 - stale assumptions
-- unvalidated assumptions
+- hidden assumptions
 - contradicted assumptions
-- hidden assumptions carrying too much weight
+- assumptions doing too much of the logical work
 
-### Phase 7: Produce Validation Report
+### Phase 7: Issue The Verdict
 
-Return:
+Use one of four verdicts:
 
-- verdict
-- confidence
-- chain status
-- evidence assessment
-- coherence issues
-- assumption issues
-- recommended corrections
-- what would increase confidence
+- `green`: sound enough to proceed
+- `yellow`: promising but materially incomplete
+- `red`: logic is weak or broken
+- `blocked`: cannot validate responsibly with the available chain or evidence
 
-## Output Format
+## Output Contract
 
 ```text
+VALIDATION TARGET
+...
+
+READINESS
+Claim:
+Chain status:
+Evidence grade:
+
 VERDICT
 ...
 
-CONFIDENCE
+WHY
 ...
 
-CHAIN STATUS
-...
-
-EVIDENCE ASSESSMENT
-...
-
-COHERENCE ISSUES
+CHAIN BREAKS
 - ...
 
-ASSUMPTION ISSUES
+ASSUMPTION LOAD
+- ...
+
+SUCCESS SIGNALS
 - ...
 
 RECOMMENDED CORRECTIONS
@@ -151,19 +187,20 @@ WHAT WOULD INCREASE CONFIDENCE
 - ...
 ```
 
+## Guardrails
+
+1. Do not treat a complete-looking chain as a sound chain.
+2. Do not hide missing links behind polished prose.
+3. Do not let optimism substitute for causal logic.
+4. Do not pass a chain that has no clear success signal.
+5. If the real answer is "not enough to validate," return `blocked`.
+
 ## Failure Modes
 
 Watch for:
 
-- a bet that is sensible on its own but disconnected from the initiative
-- an initiative that sounds strategic but does not clearly move the outcome
-- weak or stale evidence
-- a chain that is formally complete but causally weak
-- unclear success signals
-- assumptions doing too much hidden work
-
-## Judgment Standard
-
-Act like a disciplined product reviewer, not a generic critic.
-
-If the logic is weak, say exactly where it breaks and what would need to change to make it stronger.
+- a sensible action attached to the wrong goal
+- an initiative that sounds strategic but has no mechanism
+- evidence that is adjacent to the claim rather than supportive of it
+- assumptions carrying most of the weight in silence
+- vague success language that cannot be used to decide anything

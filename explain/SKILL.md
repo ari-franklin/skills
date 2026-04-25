@@ -1,133 +1,155 @@
 ---
 name: explain
-description: Translate product reasoning into clear audience- and horizon-appropriate narratives without changing the underlying logic. Use when explaining priorities, decompositions, validations, or outcome-to-bet chains to yourself, a team, or executives.
+description: Translate existing reasoning into clear audience-appropriate explanations without changing the logic, evidence, or uncertainty. Use when explaining a priority call, decomposition, validation result, plan, or decision to yourself, a team, leadership, or another audience.
 ---
 
-# Explain Product Reasoning
+# Explain
 
-Explain product reasoning clearly without changing its substance.
+Make reasoning easier to use without changing what it means.
 
-## Philosophy
+## Purpose
 
-This skill is the narrative translation layer for the reasoning system.
+This skill is a translation layer, not a persuasion layer.
 
-It does not invent new logic. It translates existing logic so that priorities, decompositions, validations, and decision chains become easier to articulate across audiences and horizons.
-
-It may adapt:
+It can adapt:
 
 - depth
-- emphasis
-- vocabulary
 - framing
+- vocabulary
+- ordering
 
 It must not adapt:
 
-- the actual logic
-- the material evidence
+- the underlying logic
+- the actual evidence
 - the real uncertainty
+- the real tradeoffs
 
-It may optionally add a spoken narrative, but that narrative must remain a translation of the same reasoning rather than a more persuasive substitute for it.
+## Inputs
 
-## Invocation
+It can explain:
 
-Use this skill when the user asks things like:
+- a prioritization result
+- a decomposition
+- a validation report
+- a strategy memo
+- a decision chain
+- a user-provided summary
 
-- "Explain this priority"
-- "How should I explain this to my team?"
+## When To Activate
+
+Use when the user asks things like:
+
+- "Explain this clearly"
+- "How do I say this to my team?"
 - "Give me the exec version"
-- "Translate this reasoning into something concise"
-- "Explain why this bet matters"
+- "Translate this into something concise"
+- "Help me explain why this matters"
 
-## Default Reasoning Frame
+## Fidelity Rule
 
-When possible, explain:
+Explanation is only valid if the source reasoning remains intact.
 
-`outcome -> initiative -> bet`
-
-This provides the causal structure that should remain stable through the translation.
-
-## Supported Audiences
-
-- `self`
-- `team`
-- `exec`
-
-## Supported Horizons
-
-- `tactical`
-- `strategic`
-- `full-chain`
-
-## Procedure
-
-### Phase 1: Load the Source Reasoning
-
-Read the source object:
-
-- prioritization result
-- decomposition result
-- validation report
-- or a direct chain
-
-### Phase 2: Extract the Invariant Core
-
-Identify:
+Before rewriting, extract the invariant core:
 
 - what matters
 - why it matters
-- what action or direction is proposed
-- how it connects to the desired outcome
+- what is being proposed
 - what evidence supports it
 - what uncertainty remains
+- what should happen next
 
-This core must remain stable.
+If you cannot preserve that core, do not explain yet. Ask for better source reasoning or say what is missing.
 
-### Phase 3: Select Audience Frame
+## Readiness Gates
 
-Adapt to:
+### Gate 1: Source Reasoning Exists
+
+Identify the source object or chain. If the user only gives a conclusion, ask for the logic or mark the explanation as thin.
+
+### Gate 2: Audience Is Clear Enough
+
+Prefer an explicit audience. If the user does not provide one, infer a practical default and state it.
+
+Common audience frames:
 
 - `self`
 - `team`
 - `exec`
+- `stakeholder`
+- `customer-facing`
 
-### Phase 4: Select Horizon Frame
+### Gate 3: Horizon Is Clear Enough
 
-Adapt to:
+Prefer an explicit horizon:
 
 - `tactical`
 - `strategic`
 - `full-chain`
 
-### Phase 5: Translate Without Distortion
+If absent, choose the horizon that best matches the user request.
 
-Rewrite the explanation while preserving:
+## Translation Sequence
+
+### Phase 1: Extract The Invariant Core
+
+Write down:
+
+- the main call
+- the main reason
+- the key evidence
+- the main tradeoff
+- the main uncertainty
+- the next step
+
+### Phase 2: Set The Audience Frame
+
+Adapt emphasis based on audience needs:
+
+- `self`: precision, tradeoffs, uncertainty
+- `team`: shared context, implications, coordination
+- `exec`: stakes, rationale, risk, required decision
+- `stakeholder`: intent, consequence, confidence, asks
+- `customer-facing`: clarity, restraint, trust-safe wording
+
+### Phase 3: Set The Horizon Frame
+
+Adapt the structure:
+
+- `tactical`: what to do now and why
+- `strategic`: why this direction matters
+- `full-chain`: goal, approach, action, evidence, uncertainty
+
+### Phase 4: Rewrite Without Distortion
+
+Preserve:
 
 - logic
 - evidence
 - uncertainty
 - tradeoffs
+- causal linkage
 
-### Phase 6: Surface Tradeoffs and Uncertainty
+### Phase 5: Run The Fidelity Check
 
-Do not hide:
+Before finalizing, verify that the explanation still contains:
 
-- confidence level
-- tradeoffs
+- the original decision or claim
+- the real basis for that claim
+- the limiting uncertainty
 - what would change the view
-- unresolved material questions
 
-### Phase 7: Produce Explanation
+If any of those disappear, revise before delivering.
 
-Return an explanation that is:
-
-- audience-appropriate
-- horizon-appropriate
-- faithful to the source reasoning
-- concise enough to use in practice
-
-## Output Format
+## Output Contract
 
 ```text
+AUDIENCE
+...
+
+HORIZON
+...
+
 CORE MESSAGE
 ...
 
@@ -137,30 +159,33 @@ WHY IT MATTERS
 EVIDENCE
 ...
 
-TRADEOFFS / UNCERTAINTY
+TRADEOFFS AND UNCERTAINTY
 ...
 
 WHAT HAPPENS NEXT
 ...
 ```
 
-Optional:
+Optional when useful:
 
 ```text
-SPOKEN NARRATIVE
+SPOKEN VERSION
 ...
 ```
+
+## Guardrails
+
+1. Do not invent stronger logic than the source contains.
+2. Do not explain away uncertainty.
+3. Do not simplify until the causal chain disappears.
+4. Do not make weak reasoning sound executive-ready through tone alone.
+5. If the source reasoning is thin, say so.
 
 ## Failure Modes
 
 Watch for:
 
-- changing the reasoning while simplifying it
-- making uncertainty disappear
-- oversimplifying for executives until the logic becomes misleading
-- explaining action without preserving outcome linkage
-- generic product-speak disconnected from evidence
-
-## Judgment Standard
-
-Act like a disciplined communicator translating sound product reasoning, not a persuasive narrator trying to make every idea sound good.
+- a crisp explanation of a fuzzy idea
+- dropping the evidence because the audience is senior
+- swapping real tradeoffs for generic product language
+- compressing so hard that the recommendation loses its basis
