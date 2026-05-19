@@ -10,9 +10,9 @@ That is the job of this skill.
 
 ## The core constraint
 
-This skill is not supposed to improve the reasoning.
+This skill is not supposed to improve reasoning.
 
-It is supposed to preserve the reasoning while making it easier to carry:
+It is supposed to preserve reasoning while making it easier to carry:
 
 - across audiences
 - across levels of altitude
