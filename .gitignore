@@ -7,6 +7,3 @@
 /plans/
 /prd_example.txt
 /skills/story-slicer-tasker/.taskmaster/templates/*.txt
-
-# Local skill repo copies
-change-lenses-and-actions/
