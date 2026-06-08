@@ -24,6 +24,17 @@ Produce one of these deliverables:
 - A critique with concrete revision moves
 - A compressed version of an existing draft that preserves the argument
 
+## Required Output Format
+
+When Superloop is used, its output must explicitly show:
+
+- the selected steps (Explain / Prioritize / Decompose / Validate)
+- the output produced by each selected step
+
+Use the structure in `references/output-contract.md`:
+
+ROUTING DECISION -> (Selected Path, Routing Confidence, Reason) -> selected mode sections -> FINAL TAKEAWAY
+
 ## When To Use
 
 Use this skill when the user:
