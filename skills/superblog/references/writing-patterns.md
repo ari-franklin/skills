@@ -52,3 +52,95 @@ Best for: concepts like real options, constraints, autonomy, resilience, or deci
 - Cut throat-clearing introductions.
 - Remove any paragraph that repeats the thesis without adding tension, example, or consequence.
 - Make the ending more pointed than the opening.
+
+### Avoid
+
+### Avoid opening with a grand statement
+
+Do not start with sweeping claims like:
+
+- AI is transforming work.
+- Product management is changing.
+- Leadership is evolving.
+- The future of work is here.
+
+Prefer a concrete observation.
+
+Not:
+
+AI is transforming product management.
+
+Better:
+
+Last year, a team might have spent weeks aligning on a one-pager before anyone could react to the idea. Now they can generate ten directions before lunch.
+
+### Limit single-line paragraphs
+
+Single-line paragraphs create emphasis through scarcity.
+
+Use them intentionally.
+
+As a rule, limit them to one per article.
+
+### Avoid the construction “it is not X, it is Y”
+
+This construction is overused and often shortcuts the reasoning.
+
+Instead of replacing one idea with another, show why the first explanation is incomplete. Let readers arrive at the conclusion.
+
+### Avoid words like “quietly”
+
+Common examples:
+
+- quietly changing
+- quietly transforming
+- quietly becoming
+- quietly destroying
+
+They often create artificial intrigue instead of real insight.
+
+Be direct.
+
+### Avoid manufactured certainty
+
+Avoid:
+
+- The future belongs to...
+- This changes everything.
+- The reality is...
+- The winners will be...
+
+Prefer exploration over proclamation.
+
+### Avoid generic executive language
+
+Avoid:
+
+- leverage
+- unlock value
+- move the needle
+- strategic imperative
+- drive alignment
+- maximize impact
+
+Use plain language whenever possible.
+
+### Avoid framework-first writing
+
+Do not start with the framework.
+
+Earn the framework.
+
+The observation should come first. The framework, if there is one, should emerge naturally from the idea.
+
+### Do not skip the observation phase
+
+This is the most important rule.
+
+Most weak writing jumps straight to the insight.
+
+Strong writing earns the insight through observation, tension, and reasoning.
+
+Observation → System → Decision.
+
+Not the other way around.
