@@ -1,0 +1,23 @@
+{
+  "skill_name": "lightweight-backlog-stories",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Turn this into a lightweight backlog story before design.md: We need a way for store associates to see why an online pickup order is blocked, because today they just get a generic failure and call support.",
+      "expected_output": "Markdown for a single backlog item with Type, Context, and Definition of Done. The response should ask for or infer a type, explain why the work matters and who cares, and use a user-story-appropriate DoD format if treated as a story.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Write a spike for whether we should keep using our current feature flag service for experiments in checkout. We need enough for design.md, not a full plan.",
+      "expected_output": "Markdown with lightweight Context and a spike-specific Definition of Done organized into outputs and questions to answer.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Create a bug ticket draft before design.md: on mobile Safari the checkout review button sometimes stays disabled after all required fields are complete.",
+      "expected_output": "Markdown with a bug Type, clear Context covering impact and audience, and a Definition of Done split into Observed Behavior and Expected Behavior.",
+      "files": []
+    }
+  ]
+}
