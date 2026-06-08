@@ -72,6 +72,16 @@ Use `superloop` before drafting when:
 
 After `superloop` returns its reasoning output, translate the conclusion back into the superblog workflow and continue with `incubate`, `outline`, `draft`, `critique`, or `compress`.
 
+## Required When Superloop Is Used
+
+If Superblog invokes Superloop at any point, the Superblog output MUST include the Superloop output in the Superloop output-contract format:
+
+- ROUTING DECISION (Selected Path, Routing Confidence, Reason)
+- Sections for each selected step (Explain / Prioritize / Decompose / Validate)
+- FINAL TAKEAWAY
+
+This is required even if the user only asked for a draft — the reasoning route and outputs should remain visible unless the user explicitly says to hide them.
+
 ## Core Rules
 
 1. Start with the strongest claim, not the topic category.
