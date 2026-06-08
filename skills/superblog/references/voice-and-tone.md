@@ -27,6 +27,8 @@ The writer is not an expert on a stage handing down universal rules. The writer 
 ## Avoid
 
 - "In today's fast-paced world"
+- "quietly"
+- "Not because..."
 - "Unlock", "leverage", "delight", "game changer", and other default business filler
 - Overly neat numbered frameworks
 - Empty contrarianism
