@@ -19,3 +19,5 @@ Purpose: identify what is weak in a draft and provide concrete revision moves.
 - Distinguish unclear thinking from rough prose.
 - Preserve the writer's voice.
 - Do not flatten the draft into generic business writing.
+- Treat "clean but boring" as a serious failure mode, not a minor style issue.
+- If the draft is surface-level, prescribe missing substance: scene, evidence, counterargument, implication, and decision rule.

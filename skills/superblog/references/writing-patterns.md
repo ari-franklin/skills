@@ -44,6 +44,10 @@ Best for: concepts like real options, constraints, autonomy, resilience, or deci
 - Let examples carry explanation when possible.
 - Make headings clear, not cute.
 - End sections with a sentence that advances the argument.
+- Explain why the old rule or common belief used to make sense before arguing that it changed.
+- Add the "what did not change" section when writing about AI or tool shifts.
+- Look for the second-order consequence: if this is true, what behavior, signal, or decision gets reweighted?
+- Convert thin heuristics into tests the reader could apply in a real decision.
 
 ## Revision Moves
 
@@ -52,6 +56,8 @@ Best for: concepts like real options, constraints, autonomy, resilience, or deci
 - Cut throat-clearing introductions.
 - Remove any paragraph that repeats the thesis without adding tension, example, or consequence.
 - Make the ending more pointed than the opening.
+- If the draft feels like a LinkedIn post, add story, tension, and consequence before polishing sentences.
+- If revision notes say "add an example," add the example before returning the final draft.
 
 ### Avoid
 
