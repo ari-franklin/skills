@@ -1,42 +1,210 @@
 ---
-name: frontend-design
-description: Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.
-license: Complete terms in LICENSE.txt
+name: superloop
+description: Route complex reasoning requests through Explain, Prioritize, Decompose, and Validate modes in the right order. Use when the user needs clearer thinking before acting, especially for ambiguous ideas, competing options, messy strategies, weak claims, roadmap chaos, or decisions that require traceable reasoning rather than a quick answer.
+license: MIT
+metadata:
+  author: arifranklin
+  version: "1.0"
+  modes:
+    - explain
+    - prioritize
+    - decompose
+    - validate
 ---
 
-This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
+# Superloop
 
-The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.
+Superloop is a reasoning router. It decides what kind of thinking is missing, runs the smallest useful sequence of reasoning modes, and stops when the next move is clear.
 
-## Design Thinking
+It is not a writing style, implementation plan, or generic brainstorming workflow. Its job is to improve the user's decision quality.
 
-Before coding, understand the context and commit to a BOLD aesthetic direction:
-- **Purpose**: What problem does this interface solve? Who uses it?
-- **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc. There are so many flavors to choose from. Use these for inspiration but design one that is true to the aesthetic direction.
-- **Constraints**: Technical requirements (framework, performance, accessibility).
-- **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
+## Outcome
 
-**CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
+Produce:
 
-Then implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
-- Production-grade and functional
-- Visually striking and memorable
-- Cohesive with a clear aesthetic point-of-view
-- Meticulously refined in every detail
+- A visible routing decision
+- The selected reasoning path
+- The minimum reasoning needed to improve the decision
+- A final takeaway the user can act on
 
-## Frontend Aesthetics Guidelines
+## When To Use
 
-Focus on:
-- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics; unexpected, characterful font choices. Pair a distinctive display font with a refined body font.
-- **Color & Theme**: Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes.
-- **Motion**: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions. Use scroll-triggering and hover states that surprise.
-- **Spatial Composition**: Unexpected layouts. Asymmetry. Overlap. Diagonal flow. Grid-breaking elements. Generous negative space OR controlled density.
-- **Backgrounds & Visual Details**: Create atmosphere and depth rather than defaulting to solid colors. Add contextual effects and textures that match the overall aesthetic. Apply creative forms like gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, custom cursors, and grain overlays.
+Use this skill when the user:
 
-NEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial, system fonts), cliched color schemes (particularly purple gradients on white backgrounds), predictable layouts and component patterns, and cookie-cutter design that lacks context-specific character.
+- Has an ambiguous idea and needs to understand it
+- Has competing options and needs to choose what matters most
+- Has a large or messy thing and needs structure
+- Has a claim, plan, or strategy and needs to know whether it holds up
+- Asks what to do next but the right reasoning mode is not obvious
+- Needs traceable reasoning, not just a conclusion
 
-Interpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, different fonts, different aesthetics. NEVER converge on common choices (Space Grotesk, for example) across generations.
+Do not use this skill when:
 
-**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code with extensive animations and effects. Minimalist or refined designs need restraint, precision, and careful attention to spacing, typography, and subtle details. Elegance comes from executing the vision well.
+- The user asks for a simple factual answer
+- The user has already chosen the needed specialist skill
+- The task is primarily execution after the reasoning is settled
+- Additional analysis would not change the recommendation
 
-Remember: Claude is capable of extraordinary creative work. Don't hold back, show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
+## Reasoning Modes
+
+Superloop routes among four modes:
+
+- `Explain`: clarify meaning, context, definitions, or what is actually being discussed
+- `Prioritize`: rank options, choose what matters, or decide sequence under constraints
+- `Decompose`: break down a large or unclear thing into useful parts, levers, or workstreams
+- `Validate`: test whether a claim, strategy, plan, or causal chain is sound enough to act on
+
+Mode source files:
+
+- `references/explain/SKILL.md`
+- `references/prioritize/SKILL.md`
+- `references/decompose/SKILL.md`
+- `references/validate/SKILL.md`
+
+## Required References
+
+Load these references as needed:
+
+- `references/routing-rules.md`: how to identify the primary reasoning gap
+- `references/order-rules.md`: how to sequence multiple reasoning modes
+- `references/stop-conditions.md`: when to stop instead of running more modes
+- `references/output-contract.md`: final response structure
+
+## Core Rule
+
+Do not select modes based only on user wording. Select the mode that closes the most important reasoning gap.
+
+## Routing Guide
+
+Use `Explain` when the gap is understanding:
+
+- ambiguous language
+- unclear definitions
+- conflicting interpretations
+- uncertainty about what is being discussed
+
+Use `Prioritize` when the gap is decision-making:
+
+- too many options
+- competing priorities
+- resource constraints
+- sequencing uncertainty
+
+Use `Decompose` when the gap is structure:
+
+- complexity
+- unclear organization
+- undefined components
+- execution feels overwhelming
+
+Use `Validate` when the gap is confidence:
+
+- uncertainty about a claim
+- uncertainty about a strategy
+- uncertainty about a recommendation
+- hidden assumptions or weak causal logic
+
+If the primary gap is unclear, start with `Explain` and surface low routing confidence.
+
+## Ordering Rules
+
+Use the shortest path that closes the reasoning gap.
+
+Default ordering:
+
+1. `Explain` before any mode that depends on shared understanding
+2. `Prioritize` before `Decompose` when selecting among options
+3. `Decompose` before `Prioritize` when the object itself is unclear
+4. `Validate` before commitment, especially when the action is costly or hard to reverse
+
+Common paths:
+
+- `Explain`
+- `Explain -> Prioritize`
+- `Explain -> Decompose`
+- `Explain -> Validate`
+- `Explain -> Prioritize -> Decompose`
+- `Explain -> Decompose -> Prioritize`
+- `Explain -> Prioritize -> Validate`
+
+## Workflow
+
+### 1. Identify The Reasoning Gap
+
+Name the primary gap:
+
+- understanding
+- decision
+- structure
+- confidence
+
+If there are multiple gaps, state the dependency between them.
+
+### 2. Select The Route
+
+Choose the smallest route that can improve the decision.
+
+Include:
+
+- selected path
+- routing confidence: `High`, `Moderate`, or `Low`
+- reason for the route
+
+### 3. Run The Selected Modes
+
+For each selected mode, use the matching mode file as the operating contract:
+
+- Explain: preserve source reasoning while making it clearer
+- Prioritize: rank options with evidence, urgency, confidence, and override logic
+- Decompose: structure a large or ambiguous target without collapsing into tasks too early
+- Validate: test chain completeness, evidence quality, causal coherence, success signals, and assumptions
+
+### 4. Stop When The Next Move Is Clear
+
+Stop when:
+
+- the next move is clear
+- the recommendation is actionable
+- confidence is sufficient for the decision at hand
+- further reasoning is unlikely to change the conclusion
+
+Do not continue only because another mode exists.
+
+### 5. Return Traceable Reasoning
+
+Use `references/output-contract.md` unless the user asks for a different format.
+
+Default output:
+
+```text
+ROUTING DECISION
+Selected Path:
+Routing Confidence:
+Reason:
+
+EXPLAIN
+...
+
+PRIORITIZE
+...
+
+DECOMPOSE
+...
+
+VALIDATE
+...
+
+FINAL TAKEAWAY
+...
+```
+
+Only include sections for modes that were actually selected.
+
+## Guardrails
+
+1. Do not run every mode by default.
+2. Do not prioritize undefined objects.
+3. Do not decompose work that may not matter.
+4. Do not validate unstated claims.
+5. Do not make weak reasoning sound stronger through polished prose.
+6. Do not keep analyzing after the decision is already improved enough.
