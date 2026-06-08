@@ -6,7 +6,10 @@ Purpose: write a complete blog post in the superblog voice.
 
 - Title options
 - One-sentence thesis
+- superloop worflow chosen
+-   superloop output from each step
 - Draft
+- LinkedIn version
 - Revision notes
 
 ## Draft Requirements
