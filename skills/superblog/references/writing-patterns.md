@@ -88,6 +88,15 @@ Use them intentionally.
 
 As a rule, limit them to one per article.
 
+Do not create a draft that looks like a sequence of social-post lines. If several consecutive paragraphs are one sentence long, combine them into fuller paragraphs or develop the reasoning.
+
+A good body paragraph usually does at least two of these:
+
+- advances the claim
+- gives the reason
+- shows the consequence
+- adds an example or contrast
+
 ### Avoid the construction “it is not X, it is Y”
 
 This construction is overused and often shortcuts the reasoning.

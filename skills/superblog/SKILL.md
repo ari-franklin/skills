@@ -98,6 +98,7 @@ This is required even if the user only asked for a draft — the reasoning route
 8. Avoid generic "in today's fast-paced world" openings and tidy numbered-list essays unless the content genuinely calls for a list.
 9. Do not return a surface-level draft. If the article could be summarized as a tidy heuristic without losing much, it is not deep enough yet.
 10. A post needs at least one of: a real scene, a specific observed example, a sharp counterargument, or a surprising second-order implication. Prefer two or more.
+11. Do not stack single-line paragraphs. They are emphasis devices, not the default rhythm. A full draft should usually have zero or one single-line paragraph outside headings, lists, quotes, and section transitions.
 
 ## Workflow
 
@@ -192,6 +193,9 @@ Check the draft against the references:
 - Does the ending sharpen the idea instead of merely summarizing it?
 - Would a reader who already agrees with the headline still learn something?
 - Is there enough story, specificity, and friction to avoid sounding like an AI summary?
+- Are most body paragraphs developed into 2-5 sentence units with a clear idea, reason, and consequence?
+- Are there more than one or two single-line body paragraphs? If yes, merge or develop them before returning the draft.
+- Does any one-line paragraph earn its emphasis by landing a major turn, or is it just creating artificial drama?
 
 ## Output Formats
 
@@ -207,7 +211,7 @@ When writing a complete post, include:
 
 - 5-10 title options
 - A one-sentence thesis
-- the superloop workflow chosen and its outputs
-- a compressed viral version to share on LinkedIn
+- Superloop workflow and outputs, if Superloop was invoked
 - The draft
+- A compressed LinkedIn version, if useful or requested
 - A short revision note listing the two or three biggest improvement opportunities

@@ -56,3 +56,15 @@ For a complete blog post, default to a substantive article, not a short note. A 
 - Skeptical of process theater
 - Useful without sounding prescriptive
 - Specific enough that it could not have been written from the title alone
+
+## Paragraph Quality Threshold
+
+Before returning a full draft, scan the body paragraphs.
+
+- Most body paragraphs should be 2-5 sentences.
+- A paragraph should usually contain an idea, a reason, and a consequence or example.
+- Single-line paragraphs are allowed only for rare emphasis, section turns, or deliberately isolated lines.
+- Do not use more than one single-line body paragraph in a full article unless the source samples clearly require that rhythm.
+- If a draft has several consecutive one-line paragraphs, merge them into developed paragraphs or expand the reasoning.
+
+Fail the draft if it reads like a stack of social-post lines instead of an essay.

@@ -21,3 +21,4 @@ Purpose: identify what is weak in a draft and provide concrete revision moves.
 - Do not flatten the draft into generic business writing.
 - Treat "clean but boring" as a serious failure mode, not a minor style issue.
 - If the draft is surface-level, prescribe missing substance: scene, evidence, counterargument, implication, and decision rule.
+- Treat excessive single-line paragraphs as a structure problem. Recommend merging or developing them unless each one earns emphasis.
