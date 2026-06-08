@@ -6,8 +6,7 @@ Purpose: write a complete blog post in the superblog voice.
 
 - Title options
 - One-sentence thesis
-- superloop worflow chosen
--   superloop output from each step
+- Superloop workflow chosen (routing decision + per-step outputs), if Superloop was invoked
 - Draft
 - LinkedIn version
 - Revision notes
