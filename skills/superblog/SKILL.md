@@ -1,7 +1,7 @@
 ---
 name: superblog
 description: Write, reshape, and critique product-thinking blog posts in Arif Franklin's style. Use when the user asks to turn an idea, note, story, draft, meeting insight, or product lesson into a blog post, incubate whether an idea is worth writing, outline an essay, revise a draft, compress a long post, or match the voice of the local superblog samples.
-license: MIT
+license: private
 metadata:
   author: arifranklin
   companion-skills:
