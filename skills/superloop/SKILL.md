@@ -110,9 +110,11 @@ If the primary gap is unclear, start with `Explain` and surface low routing conf
 
 Use the shortest path that closes the reasoning gap.
 
+`Explain` is not mandatory. Use it only when the user, object, claim, scope, or context is ambiguous enough that another mode would be working from unstable ground.
+
 Default ordering:
 
-1. `Explain` before any mode that depends on shared understanding
+1. `Explain` before any mode that depends on missing shared understanding
 2. `Prioritize` before `Decompose` when selecting among options
 3. `Decompose` before `Prioritize` when the object itself is unclear
 4. `Validate` before commitment, especially when the action is costly or hard to reverse
@@ -120,9 +122,14 @@ Default ordering:
 Common paths:
 
 - `Explain`
+- `Prioritize`
+- `Decompose`
+- `Validate`
 - `Explain -> Prioritize`
 - `Explain -> Decompose`
 - `Explain -> Validate`
+- `Prioritize -> Validate`
+- `Decompose -> Prioritize`
 - `Explain -> Prioritize -> Decompose`
 - `Explain -> Decompose -> Prioritize`
 - `Explain -> Prioritize -> Validate`
