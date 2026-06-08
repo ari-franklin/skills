@@ -161,7 +161,7 @@ When writing a complete post, include:
 
 - 5-10 title options
 - A one-sentence thesis
-- the superplan workflow chosen and its outputs
+- the superloop workflow chosen and its outputs
 - a compressed viral version to share on LinkedIn
 - The draft
 - A short revision note listing the two or three biggest improvement opportunities
