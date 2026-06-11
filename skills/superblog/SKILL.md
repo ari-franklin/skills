@@ -1,6 +1,6 @@
 ---
 name: superblog
-description: Write, reshape, and critique product-thinking blog posts in Arif Franklin's style. Use when the user asks to turn an idea, note, story, draft, meeting insight, or product lesson into a blog post, incubate whether an idea is worth writing, outline an essay, revise a draft, compress a long post, or match the voice of the local superblog samples.
+description: Write, reshape, and critique product-thinking blog posts in Arif Franklin's style. Use when the user asks to turn an idea, note, story, draft, meeting insight, or product lesson into a blog post, incubate whether an idea is worth writing, outline an essay, revise a draft, create visual storytelling support, compress a long post, or match the voice of the local superblog samples.
 license: private
 metadata:
   author: arifranklin
@@ -58,6 +58,7 @@ Load only the references needed for the requested task:
 - `references/visual-metaphors.md`: concrete analogy patterns
 - `references/argument-depth.md`: depth gates for non-obvious, non-surface-level posts
 - `references/image-style.md`: visual taste, composition rules, and image-brief standards
+- `references/visual-storytelling.md`: how to choose images, diagrams, tables, timelines, and charts from the article's argument
 - `references/diagrams.md`: Mermaid diagram selection, syntax guardrails, and fallback rules
 - `references/substack-html-output.md`: Substack-ready HTML formatting contract
 
@@ -175,7 +176,21 @@ If these gates fail and the user has not provided the missing story or evidence,
 
 Load `references/argument-depth.md` when the idea feels tidy, familiar, short, or likely to become a generic essay. Use it to strengthen the mechanism, counterargument, evidence, and consequence before drafting.
 
-### 4. Draft In The Target Shape
+### 4. Identify Visual Story Opportunities
+
+When the user asks for visual storytelling, a visual artifact, diagrams, images, Substack HTML, or a more memorable article shape, load `references/visual-storytelling.md`.
+
+Identify whether the article needs:
+
+- an image to make the tension felt
+- a diagram to make structure visible
+- a table to make a comparison scannable
+- a timeline to make change legible
+- a callout or decision test to make application easy
+
+Only add visual devices after the thesis, reader tension, and story sequence are stable. If no visual device reduces reader effort, say so and keep the post prose-led.
+
+### 5. Draft In The Target Shape
 
 Prefer this shape unless the material suggests a better one:
 
@@ -202,7 +217,7 @@ For a full blog post, default to a substantive draft rather than a short essay. 
 
 If the result is underdeveloped, keep drafting instead of returning revision notes that tell the user to add the missing substance.
 
-### 5. Revise For Superblog Fit
+### 6. Revise For Superblog Fit
 
 Check the draft against the references:
 
@@ -218,25 +233,25 @@ Check the draft against the references:
 - Are there more than one or two single-line body paragraphs? If yes, merge or develop them before returning the draft.
 - Does any one-line paragraph earn its emphasis by landing a major turn, or is it just creating artificial drama?
 
-### 6. Create Image Briefs When Requested
+### 7. Create Image Briefs When Requested
 
 Create image briefs after the outline or draft has a stable thesis. Load `references/image-style.md`, `references/visual-metaphors.md`, and `scripts/image-brief.md`.
 
 Prefer 1-2 image concepts per post. Each concept must clarify the argument or tension, not merely decorate the topic. If the user asks to generate the actual images, use the available `imagegen` capability after the brief is clear.
 
-### 7. Create Diagrams When Requested Or Clearly Useful
+### 8. Create Diagrams When Requested Or Clearly Useful
 
-Create diagrams after the outline or draft has a stable argument and the idea has a shape worth making visible. Load `references/diagrams.md` and `scripts/diagram.md`.
+Create diagrams after the outline or draft has a stable argument and the idea has a shape worth making visible. Load `references/visual-storytelling.md`, `references/diagrams.md`, and `scripts/diagram.md`.
 
 Prefer one diagram per post unless the user explicitly asks for more. Each diagram must clarify the argument's structure, flow, lifecycle, timeline, system interaction, or before/after change. If the diagram does not reduce reader effort, omit it.
 
 When adding a diagram to an HTML artifact, use `<pre class="mermaid">...</pre>` for Mermaid and include an ASCII or prose fallback when the point is important enough to survive a failed render.
 
-### 8. Create Substack-Ready HTML When Requested
+### 9. Create Substack-Ready HTML When Requested
 
 Create a Substack-ready HTML page when the user asks for HTML, Substack formatting, a copy/paste-ready draft, or a publication-ready visual layout.
 
-Load `references/substack-html-output.md` and `references/image-style.md`. If the artifact includes diagrams, also load `references/diagrams.md`.
+Load `references/substack-html-output.md`, `references/visual-storytelling.md`, and `references/image-style.md`. If the artifact includes diagrams, also load `references/diagrams.md`.
 
 The HTML version should:
 

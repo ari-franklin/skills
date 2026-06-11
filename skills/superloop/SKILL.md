@@ -1,6 +1,6 @@
 ---
 name: superloop
-description: Route complex reasoning requests through Explain, Prioritize, Decompose, and Validate modes in the right order. Use when the user needs clearer thinking before acting, especially for ambiguous ideas, competing options, messy strategies, weak claims, roadmap chaos, or decisions that require traceable reasoning rather than a quick answer.
+description: Route complex reasoning requests through Explain, Prioritize, Decompose, and Validate modes in the right order. Use when the user needs clearer thinking before acting, especially for ambiguous ideas, competing options, messy strategies, weak claims, roadmap chaos, visual explanation of reasoning, or decisions that require traceable reasoning rather than a quick answer.
 license: MIT
 metadata:
   author: arifranklin
@@ -71,6 +71,7 @@ Load these references as needed:
 - `references/stop-conditions.md`: when to stop instead of running more modes
 - `references/output-contract.md`: final response structure
 - `references/html-output-contract.md`: optional static HTML decision dossier structure
+- `references/visual-reasoning.md`: optional visual explanation layer for sequences, comparisons, relationships, and decision artifacts
 
 ## Core Rule
 
@@ -209,7 +210,19 @@ FINAL TAKEAWAY
 
 Only include sections for modes that were actually selected.
 
-### 6. Create HTML Decision Dossier When Useful
+### 6. Add A Visual Layer When It Reduces Effort
+
+When the Superloop output includes a route, comparison, hierarchy, causal chain, dependency map, or decision tradeoff, consider whether a visual layer would make the reasoning easier to inspect.
+
+Load `references/visual-reasoning.md` when:
+
+- the user asks for visual storytelling, a diagram, a chart, a map, or a shareable artifact
+- a multi-mode route would be easier to scan as a route map
+- a prioritization, decomposition, or validation result contains relationships that prose would make harder to follow
+
+Use the visual layer to clarify the reasoning already produced. Do not add a visual to strengthen weak evidence, hide uncertainty, or make the result feel more polished than it is.
+
+### 7. Create HTML Decision Dossier When Useful
 
 Create a static interactive HTML dossier when the user asks for HTML, an interactive output, a shareable artifact, or a durable version of the Superloop run. For multi-mode runs, offer or create the dossier when it would make the reasoning easier to inspect.
 

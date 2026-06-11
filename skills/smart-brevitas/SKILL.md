@@ -1,6 +1,6 @@
 ---
 name: smart-brevitas
-description: Transform messy notes, meeting transcripts, documents, and updates into crisp Axios-style briefings. Use when the user needs Smart Brevity-style communication editing, executive briefs, weekly updates, internal announcements, external announcements, signal extraction, or a ruthless rewrite that leads with what is new, important, and actionable.
+description: Transform messy notes, meeting transcripts, documents, and updates into crisp Axios-style briefings. Use when the user needs Smart Brevity-style communication editing, executive briefs, weekly updates, internal announcements, external announcements, signal extraction, visual compression into tables or timelines, or a ruthless rewrite that leads with what is new, important, and actionable.
 license: private
 metadata:
   author: arifranklin
@@ -52,6 +52,7 @@ Load only the references needed for the requested task:
 - `references/axios-labels.md`: approved section labels and when to use them
 - `references/mode-contracts.md`: mode selection and required sections
 - `references/editing-rules.md`: cutting, rewriting, and quality checks
+- `references/visual-compression.md`: optional tables, timelines, scorecards, and before/after views for faster scanning
 - `references/examples.md`: compact examples of before/after style
 
 Use the matching script file in `scripts/` as the output contract:
@@ -96,7 +97,8 @@ If Superloop is used, keep its output brief and then translate the result into S
 9. Use coffee-shop voice: plain, direct, human, and specific.
 10. Remove jargon, passive voice, throat-clearing, and obvious context.
 11. Do not fabricate quotes, facts, dates, numbers, decisions, or risks.
-12. If critical context is missing, state the assumption or ask a concise question.
+12. Use compact tables, timelines, and scorecards only when they make the signal faster to see than bullets.
+13. If critical context is missing, state the assumption or ask a concise question.
 
 ## Workflow
 
@@ -136,6 +138,8 @@ Load `references/mode-contracts.md` and the matching script file.
 
 Use the fewest sections needed. Do not include a section just because the template allows it.
 
+Load `references/visual-compression.md` when the source contains comparable options, dated phases, metrics, owners, risks, or before/after changes that would be clearer as a compact table, timeline, scorecard, or checklist.
+
 ### 4. Rewrite Ruthlessly
 
 Apply `references/editing-rules.md`.
@@ -167,6 +171,7 @@ Before returning, verify:
 - The first section answers why the reader should care.
 - The brief can be scanned without reading every word.
 - Bold anchors are meaningful and not decorative.
+- Any table, timeline, or scorecard makes the signal faster to see than bullets would.
 - Every section earns its place.
 - The bottom line is memorable and specific.
 - No source facts were invented.
