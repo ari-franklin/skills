@@ -41,11 +41,29 @@ superloop-output/
   prioritize.html
   decompose.html
   validate.html
-  styles.css
-  script.js
+  assets/
+    template.html
 ```
 
 Only create mode pages for modes that were actually selected. If a mode was skipped, mention the skip reason on `index.html` instead of creating an empty page.
+
+When a reusable template is available, prefer a token-filled template over one-off page chrome. The recommended template contract uses four tokens:
+
+- `__TITLE__`: page title and main heading; use the topic, not the reasoning stage
+- `__SUBTITLE__`: one-line subtitle; use this for the Superloop stage or page role, such as `Superloop stage: Validate`
+- `__META__`: compact provenance line, such as selected route and generation date
+- `__CONTENT__`: page body built from standard components
+
+The template should own page shell behavior such as table of contents, scrollspy, tabs, Mermaid rendering, syntax highlighting, and responsive layout. The Superloop run should only author the body content.
+
+For mode pages, avoid titles like `Validate: Does The Logic Hold?`. Prefer:
+
+```text
+__TITLE__: Does The Logic Hold?
+__SUBTITLE__: Superloop stage: Validate
+```
+
+For the summary page, use the overall topic as `__TITLE__` and a summary label such as `Superloop dossier: Summary` as `__SUBTITLE__`.
 
 ---
 
@@ -99,6 +117,9 @@ Useful interactions:
 - copyable final takeaway
 - print-friendly styling
 - active navigation state
+- auto-generated table of contents from `h2` and `h3` headings
+- tabs generated from panels with `data-label`
+- Mermaid diagrams in `<pre class="mermaid">...</pre>`
 
 Avoid interactions that hide the conclusion or make the artifact harder to scan.
 
@@ -115,6 +136,9 @@ Use:
 - readable tables where ranking or comparison is involved
 - badges for routing confidence, selected modes, skipped modes, risks, and assumptions
 - clear navigation across pages
+- callouts for key ideas, rationale, notes, and risks
+- numbered steps for decision procedures
+- before/after columns when explaining a changed interpretation
 
 Do not use:
 
@@ -137,6 +161,26 @@ The HTML artifact must preserve the Superloop output contract:
 - distinguish evidence, assumptions, risks, and conclusions
 
 Do not add private hidden reasoning. Use only the user-facing reasoning that belongs in the final Superloop answer.
+
+## Component Guidance
+
+Use these body components when they improve scanability:
+
+- `<h2>` and `<h3>` for table-of-contents sections
+- `<div class="callout key">...</div>` for the bottom line or advance organizer
+- `<div class="callout why">...</div>` for rationale
+- `<div class="callout note">...</div>` for asides
+- `<div class="callout warn">...</div>` for risks and gotchas
+- `<div class="check">...</div>` for optional predict-then-verify comprehension checks
+- `<details class="collapse">...</details>` for progressive disclosure
+- `<div class="tabs"><div class="tab" data-label="...">...</div></div>` for alternate lenses
+- `<div class="diff"><div class="before">...</div><div class="after">...</div></div>` for before/after reasoning changes
+- `<pre class="mermaid">...</pre>` for route maps, dependency maps, and visual decision flows
+- `<ol class="steps">...</ol>` for procedures
+
+Keep one idea per `h2` or `h3` so the generated table of contents reads like an outline.
+
+For Mermaid, keep diagrams small, quote labels that contain punctuation, and make the changed or decisive node visually loudest with a class. If Mermaid syntax is uncertain, simplify the diagram rather than risking a broken render.
 
 ---
 
