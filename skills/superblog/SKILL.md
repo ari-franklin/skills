@@ -24,6 +24,8 @@ Produce one of these deliverables:
 - A critique with concrete revision moves
 - A compressed version of an existing draft that preserves the argument
 - One or two image briefs that translate the post's argument into grounded visual concepts
+- One explanatory diagram that clarifies a structure, flow, lifecycle, timeline, or change
+- A Substack-ready HTML version of a finished post, designed for direct copy/paste into a Substack draft
 
 
 ## When To Use
@@ -34,6 +36,8 @@ Use this skill when the user:
 - Wants to turn a work story, product lesson, or mental model into an essay
 - Asks for a blog outline, draft, rewrite, critique, title set, or compression
 - Asks for image ideas, cover art, or visual prompts for a finished post or strong outline
+- Asks for a diagram, Mermaid, flowchart, sequence, lifecycle, timeline, or visual explanation of the argument
+- Asks for a Substack-ready, HTML, copy/paste-ready, or publication-formatted version of a post
 - Wants writing to resemble the samples in `samples/`
 - Needs product-thinking content around Lean, XP, agile, autonomy, values, principles, constraints, resilience, uncertainty, decision-making, or AI's effect on product work
 
@@ -54,6 +58,8 @@ Load only the references needed for the requested task:
 - `references/visual-metaphors.md`: concrete analogy patterns
 - `references/argument-depth.md`: depth gates for non-obvious, non-surface-level posts
 - `references/image-style.md`: visual taste, composition rules, and image-brief standards
+- `references/diagrams.md`: Mermaid diagram selection, syntax guardrails, and fallback rules
+- `references/substack-html-output.md`: Substack-ready HTML formatting contract
 
 Use samples sparingly for calibration:
 
@@ -116,12 +122,18 @@ Infer the mode from the request:
 - `critique`: identify what is weak and how to improve it
 - `compress`: shorten without flattening the idea
 - `image-brief`: create 1-2 visual concepts and image-generation prompts for a finished post or strong outline
+- `diagram`: create one explanatory Mermaid diagram or ASCII fallback for a finished post, strong outline, or HTML artifact
+- `substack-html`: create a Substack-ready HTML page from a finished draft for direct copy/paste into Substack
 
 If the user's request is vague, default to `incubate`.
 
 If the vague request is also conceptually messy, route through `superloop` first to clarify the reasoning need before writing.
 
 Use `image-brief` only after the argument is clear enough to visualize. Do not create images from a weak topic label; first outline, draft, or clarify the thesis and tension.
+
+Use `diagram` only when the post explains a structure, flow, lifecycle, timeline, system interaction, or before/after change. Do not add a diagram merely to make the post look richer.
+
+Use `substack-html` only when there is a finished or near-finished post. If the post does not exist yet, draft or outline first, then format. Do not use Substack formatting to hide a weak argument.
 
 ### 2. Clarify Only When Needed
 
@@ -212,6 +224,30 @@ Create image briefs after the outline or draft has a stable thesis. Load `refere
 
 Prefer 1-2 image concepts per post. Each concept must clarify the argument or tension, not merely decorate the topic. If the user asks to generate the actual images, use the available `imagegen` capability after the brief is clear.
 
+### 7. Create Diagrams When Requested Or Clearly Useful
+
+Create diagrams after the outline or draft has a stable argument and the idea has a shape worth making visible. Load `references/diagrams.md` and `scripts/diagram.md`.
+
+Prefer one diagram per post unless the user explicitly asks for more. Each diagram must clarify the argument's structure, flow, lifecycle, timeline, system interaction, or before/after change. If the diagram does not reduce reader effort, omit it.
+
+When adding a diagram to an HTML artifact, use `<pre class="mermaid">...</pre>` for Mermaid and include an ASCII or prose fallback when the point is important enough to survive a failed render.
+
+### 8. Create Substack-Ready HTML When Requested
+
+Create a Substack-ready HTML page when the user asks for HTML, Substack formatting, a copy/paste-ready draft, or a publication-ready visual layout.
+
+Load `references/substack-html-output.md` and `references/image-style.md`. If the artifact includes diagrams, also load `references/diagrams.md`.
+
+The HTML version should:
+
+- preserve the final blog post as the canonical content
+- include publication-ready visual formatting that can be copied into a Substack draft
+- use images, subscribe buttons, dividers, pull quotes, block quotes, and callout blocks only where they improve readability
+- use diagrams only where they explain a structure or change that prose would make harder to follow
+- include image placeholders or generated/local image references depending on what the user requested and what assets exist
+- avoid turning the article into a busy landing page
+- provide a directly openable `.html` file unless the user asks for a framework-backed artifact
+
 ## Output Formats
 
 Use the matching script file in `scripts/` as the output contract:
@@ -222,6 +258,8 @@ Use the matching script file in `scripts/` as the output contract:
 - `scripts/critique.md`
 - `scripts/compress.md`
 - `scripts/image-brief.md`
+- `scripts/diagram.md`
+- `references/substack-html-output.md`
 
 When writing a complete post, include:
 
@@ -231,4 +269,6 @@ When writing a complete post, include:
 - The draft
 - A compressed LinkedIn version, if useful or requested
 - 1-2 image briefs, if useful or requested
+- One explanatory diagram, if useful or requested
+- A Substack-ready HTML artifact, if useful or requested
 - A short revision note listing the two or three biggest improvement opportunities
