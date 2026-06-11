@@ -23,6 +23,7 @@ Produce one of these deliverables:
 - A draft blog post in the target voice
 - A critique with concrete revision moves
 - A compressed version of an existing draft that preserves the argument
+- One or two image briefs that translate the post's argument into grounded visual concepts
 
 
 ## When To Use
@@ -32,6 +33,7 @@ Use this skill when the user:
 - Gives a rough idea and asks if it has enough weight for a post
 - Wants to turn a work story, product lesson, or mental model into an essay
 - Asks for a blog outline, draft, rewrite, critique, title set, or compression
+- Asks for image ideas, cover art, or visual prompts for a finished post or strong outline
 - Wants writing to resemble the samples in `samples/`
 - Needs product-thinking content around Lean, XP, agile, autonomy, values, principles, constraints, resilience, uncertainty, decision-making, or AI's effect on product work
 
@@ -50,6 +52,8 @@ Load only the references needed for the requested task:
 - `references/audience.md`: reader assumptions and relevance filters
 - `references/recurring-themes.md`: preferred conceptual territory
 - `references/visual-metaphors.md`: concrete analogy patterns
+- `references/argument-depth.md`: depth gates for non-obvious, non-surface-level posts
+- `references/image-style.md`: visual taste, composition rules, and image-brief standards
 
 Use samples sparingly for calibration:
 
@@ -111,10 +115,13 @@ Infer the mode from the request:
 - `draft`: write the post
 - `critique`: identify what is weak and how to improve it
 - `compress`: shorten without flattening the idea
+- `image-brief`: create 1-2 visual concepts and image-generation prompts for a finished post or strong outline
 
 If the user's request is vague, default to `incubate`.
 
 If the vague request is also conceptually messy, route through `superloop` first to clarify the reasoning need before writing.
+
+Use `image-brief` only after the argument is clear enough to visualize. Do not create images from a weak topic label; first outline, draft, or clarify the thesis and tension.
 
 ### 2. Clarify Only When Needed
 
@@ -153,6 +160,8 @@ Do not draft until the idea passes these depth gates:
 - The article has a reason to be longer than a LinkedIn post.
 
 If these gates fail and the user has not provided the missing story or evidence, either ask for the missing material or write from an explicitly labeled hypothetical/observed pattern. Do not invent personal experience.
+
+Load `references/argument-depth.md` when the idea feels tidy, familiar, short, or likely to become a generic essay. Use it to strengthen the mechanism, counterargument, evidence, and consequence before drafting.
 
 ### 4. Draft In The Target Shape
 
@@ -197,6 +206,12 @@ Check the draft against the references:
 - Are there more than one or two single-line body paragraphs? If yes, merge or develop them before returning the draft.
 - Does any one-line paragraph earn its emphasis by landing a major turn, or is it just creating artificial drama?
 
+### 6. Create Image Briefs When Requested
+
+Create image briefs after the outline or draft has a stable thesis. Load `references/image-style.md`, `references/visual-metaphors.md`, and `scripts/image-brief.md`.
+
+Prefer 1-2 image concepts per post. Each concept must clarify the argument or tension, not merely decorate the topic. If the user asks to generate the actual images, use the available `imagegen` capability after the brief is clear.
+
 ## Output Formats
 
 Use the matching script file in `scripts/` as the output contract:
@@ -206,6 +221,7 @@ Use the matching script file in `scripts/` as the output contract:
 - `scripts/draft.md`
 - `scripts/critique.md`
 - `scripts/compress.md`
+- `scripts/image-brief.md`
 
 When writing a complete post, include:
 
@@ -214,4 +230,5 @@ When writing a complete post, include:
 - Superloop workflow and outputs, if Superloop was invoked
 - The draft
 - A compressed LinkedIn version, if useful or requested
+- 1-2 image briefs, if useful or requested
 - A short revision note listing the two or three biggest improvement opportunities

@@ -81,3 +81,24 @@ Explain → Prioritize → Validate
 WHY
 
 Competing ethical values must be weighed.
+
+---
+
+## Edge Case 005
+
+INPUT
+
+We have three clear options and need to choose one by Friday.
+
+POSSIBLE ROUTES
+
+Prioritize
+Explain → Prioritize
+
+EXPECTED
+
+Prioritize
+
+WHY
+
+The option set and decision pressure are clear; explanation would add ceremony.

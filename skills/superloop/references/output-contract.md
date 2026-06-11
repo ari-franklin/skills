@@ -6,6 +6,8 @@ Expose reasoning, not just conclusions.
 
 Users should be able to inspect, challenge, and reuse each reasoning step independently.
 
+When the user asks for an HTML, interactive, shareable, or durable artifact, pair this response structure with `html-output-contract.md`.
+
 ---
 
 ## Required Sections
@@ -83,3 +85,5 @@ What should happen next?
 Reasoning should be visible.
 
 Recommendations should be traceable to the reasoning that produced them.
+
+When converted into HTML, the chat answer remains the summary view and selected modes become linked inspection views.

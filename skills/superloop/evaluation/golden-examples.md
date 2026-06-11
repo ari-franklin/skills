@@ -10,11 +10,12 @@ Should we invest next in Teach, Skulto, Supers, or Orcs?
 
 EXPECTED ROUTE
 
-Explain → Prioritize
+Prioritize
 
 WHY
 
 Options already exist.
+Decision frame is clear enough to rank directly.
 
 COMMON FAILURE
 
@@ -50,7 +51,7 @@ Does our Four Edge Thesis hold up?
 
 EXPECTED ROUTE
 
-Explain → Validate
+Validate
 
 WHY
 
@@ -95,3 +96,23 @@ Explain → Validate
 WHY
 
 Conceptual ambiguity followed by claim evaluation.
+
+---
+
+## Example 006
+
+INPUT
+
+Break our approved onboarding initiative into workstreams.
+
+EXPECTED ROUTE
+
+Decompose
+
+WHY
+
+The target is clear enough to structure directly.
+
+COMMON FAILURE
+
+Explain first out of habit.

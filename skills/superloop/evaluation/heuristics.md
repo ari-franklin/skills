@@ -2,6 +2,8 @@
 
 Understanding before prioritization.
 
+But do not force explanation when understanding is already sufficient.
+
 Prioritization before decomposition.
 
 Validation before commitment.

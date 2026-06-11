@@ -103,3 +103,14 @@ If the primary reasoning gap is unclear:
 Do not guess.
 
 Clarify first.
+
+## Direct Routes
+
+Explain is not a required first step. Use a direct route when the object, claim, option set, and decision frame are already clear enough.
+
+Examples:
+
+- Clear option set needing a choice: Prioritize
+- Clear claim needing a confidence check: Validate
+- Clear large target needing structure: Decompose
+- Clear priority call needing risk review: Prioritize -> Validate
