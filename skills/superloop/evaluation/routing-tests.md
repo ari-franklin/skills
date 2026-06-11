@@ -87,3 +87,57 @@ ACTUAL ROUTE
 ________
 
 PASS / FAIL
+
+---
+
+## Test 006
+
+INPUT
+
+Rank these already-defined roadmap bets by importance and urgency.
+
+EXPECTED ROUTE
+
+Prioritize
+
+ACTUAL ROUTE
+
+________
+
+PASS / FAIL
+
+---
+
+## Test 007
+
+INPUT
+
+Decompose this approved retention initiative into workstreams.
+
+EXPECTED ROUTE
+
+Decompose
+
+ACTUAL ROUTE
+
+________
+
+PASS / FAIL
+
+---
+
+## Test 008
+
+INPUT
+
+Validate this claim: if we reduce checkout latency by 20%, conversion will improve.
+
+EXPECTED ROUTE
+
+Validate
+
+ACTUAL ROUTE
+
+________
+
+PASS / FAIL

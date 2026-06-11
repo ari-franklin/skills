@@ -26,6 +26,7 @@ Produce:
 - The selected reasoning path
 - The minimum reasoning needed to improve the decision
 - A final takeaway the user can act on
+- When requested or useful, a static interactive HTML decision dossier that mirrors the final answer and links each selected reasoning mode as its own page
 
 ## When To Use
 
@@ -69,6 +70,7 @@ Load these references as needed:
 - `references/order-rules.md`: how to sequence multiple reasoning modes
 - `references/stop-conditions.md`: when to stop instead of running more modes
 - `references/output-contract.md`: final response structure
+- `references/html-output-contract.md`: optional static HTML decision dossier structure
 
 ## Core Rule
 
@@ -206,6 +208,21 @@ FINAL TAKEAWAY
 ```
 
 Only include sections for modes that were actually selected.
+
+### 6. Create HTML Decision Dossier When Useful
+
+Create a static interactive HTML dossier when the user asks for HTML, an interactive output, a shareable artifact, or a durable version of the Superloop run. For multi-mode runs, offer or create the dossier when it would make the reasoning easier to inspect.
+
+Use `references/html-output-contract.md`.
+
+The HTML dossier should:
+
+- preserve the same user-facing reasoning as the chat answer
+- make the selected route navigable
+- place each selected reasoning mode on its own linked page
+- include an `index.html` summary with the routing decision and final takeaway
+- avoid adding new reasoning that is not represented in the Superloop run
+- stay static and portable unless the user asks for a framework-backed app
 
 ## Guardrails
 
