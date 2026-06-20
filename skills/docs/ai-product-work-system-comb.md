@@ -15,9 +15,39 @@ That is not just a tooling rollout. It is a behavior change problem inside a wor
 
 The practical question is not whether AI can generate stories, plans, explainers, or status updates. It can. The practical question is whether those outputs improve shared judgment, alignment, and agency in the system.
 
-## Executive Summary
+## One-Minute Read
 
-The current pattern is a three-way squeeze:
+**Main point:** AI will not make product teams more strategic by itself. It can accelerate product work, but only if the surrounding operating system helps teams practice better judgment, make trade-offs visible, and close learning loops.
+
+This walkthrough is built around three judgment calls:
+
+| Question to pressure-test | What to look for in the artifact |
+|---|---|
+| Is this really an operating-system diagnosis, or does it still sound too tool-centered? | Whether the blockers are framed as capability, opportunity, motivation, forums, decision rights, and learning loops rather than AI usage alone |
+| When do standardized artifacts improve shared judgment, and when do they become theater? | Whether artifacts are connected to better decisions, clearer disagreement, and faster learning instead of just cleaner documentation |
+| What would prove AI is improving product judgment, not just increasing output? | Whether the success signals measure trade-off quality, agency, participation, and learning rather than artifact volume or adoption counts |
+
+The current pattern underneath those questions is a three-way squeeze:
+
+- Teams are being asked to use AI across discovery, planning, writing, synthesis, and communication.
+- Teams are also being asked to become more outcome-driven and strategically autonomous.
+- The work system around them often still rewards polished artifacts, reactive forums, unclear decision rights, and status theater.
+
+That creates a predictable failure mode: AI adoption shows up as more output, more documents, and faster drafting, while the harder human work of framing, deciding, disagreeing, and adapting remains under-supported.
+
+The useful intervention is not "more AI usage." It is a better operating loop:
+
+**Orient -> Diagnose -> Prioritize -> Act -> Adapt**
+
+AI should reduce friction around synthesis, drafting, retrieval, comparison, and critique. Humans still need to own framing, trade-offs, ethics, decision quality, and consequences.
+
+:::callout tip
+Treat AI as a way to make judgment visible and testable, not as a way to bypass judgment.
+:::
+
+## The Diagnosis in Brief
+
+The tension shows up across three pressures:
 
 | Pressure | What teams are being asked to do | Why it is hard |
 |---|---|---|
@@ -27,12 +57,6 @@ The current pattern is a three-way squeeze:
 
 The system is producing a predictable result: AI adoption appears in pockets, engineering workflows accelerate faster than product/stakeholder collaboration, and standardized artifacts multiply faster than common meaning.
 
-The highest-leverage intervention is to redesign the operating loop, not to push more tools. AI should reduce friction around synthesis, drafting, comparison, retrieval, and translation. Humans must still own problem framing, outcome judgment, trade-offs, ethical boundaries, and the decision to act.
-
-:::callout tip
-Treat AI as a way to make judgment visible and testable, not as a way to bypass judgment.
-:::
-
 :::quiz
 What is the central diagnosis?
 - ( ) Product teams are resisting AI because they dislike new tools.
@@ -40,6 +64,8 @@ What is the central diagnosis?
 - ( ) The main fix is to standardize more planning artifacts.
 > The issue is not basic tool preference. The target behavior requires shared models, safe forums, decision rights, practice, time, feedback, and legitimacy.
 :::
+
+# Deeper Dive
 
 # The Target Behavior
 
