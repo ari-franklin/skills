@@ -15,6 +15,49 @@ That is not just a tooling rollout. It is a behavior change problem inside a wor
 
 The practical question is not whether AI can generate stories, plans, explainers, or status updates. It can. The practical question is whether those outputs improve shared judgment, alignment, and agency in the system.
 
+:::html
+<style>
+  .artifact-tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 28px 0 34px;
+  }
+  .artifact-tabs a {
+    display: block;
+    padding: 12px 14px;
+    border: 1px solid var(--wt-border);
+    border-radius: 8px;
+    color: var(--wt-text);
+    background: var(--wt-surface);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+  .artifact-tabs a span {
+    display: block;
+    margin-top: 4px;
+    color: var(--wt-muted);
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .artifact-tabs a:hover {
+    border-color: var(--wt-accent);
+    color: var(--wt-accent-2);
+  }
+</style>
+<nav class="artifact-tabs" aria-label="Artifact sections">
+  <a href="#brief">Brief<span>The point in one pass</span></a>
+  <a href="#deeper-dive">Go Deeper<span>The full diagnosis</span></a>
+  <a href="#com-b-diagnosis">COM-B<span>Capability, opportunity, motivation</span></a>
+  <a href="#intervention-points">Interventions<span>Where to change the system</span></a>
+  <a href="#a-useful-success-standard">Signals<span>How to know it is working</span></a>
+</nav>
+:::
+
+# Brief
+
 ## One-Minute Read
 
 **Main point:** AI will not make product teams more strategic by itself. It can accelerate product work, but only if the surrounding operating system helps teams practice better judgment, make trade-offs visible, and close learning loops.
@@ -23,9 +66,9 @@ This walkthrough is built around three judgment calls:
 
 | Question to pressure-test | What to look for in the artifact |
 |---|---|
-| Is this really an operating-system diagnosis, or does it still sound too tool-centered? | Whether the blockers are framed as capability, opportunity, motivation, forums, decision rights, and learning loops rather than AI usage alone |
-| When do standardized artifacts improve shared judgment, and when do they become theater? | Whether artifacts are connected to better decisions, clearer disagreement, and faster learning instead of just cleaner documentation |
-| What would prove AI is improving product judgment, not just increasing output? | Whether the success signals measure trade-off quality, agency, participation, and learning rather than artifact volume or adoption counts |
+| What view is missing? | What would make this feel more operational and actionable, rather than an interesting but theoretical diagnosis |
+| How should the information be organized? | Which distinctions, sequence, or artifacts would help product leaders use this without getting buried in the material |
+| What would prove AI is improving product judgment? | Whether the success signals measure trade-off quality, agency, participation, and learning rather than artifact volume or adoption counts |
 
 The current pattern underneath those questions is a three-way squeeze:
 
