@@ -297,15 +297,6 @@ Ask:
 "Number of AI-generated artifacts" is misleading on its own. It may rise when the system is learning, but it can also rise when people are producing compliance evidence. Pair it with decision quality, cycle time to learning, stakeholder clarity, and team agency signals.
 :::
 
-# What I'd Love Feedback On
-
-1. Does this diagnosis put enough weight on the work system, or does it still sound too tool-centered?
-2. Where would you draw the boundary between useful artifact standardization and artifact theater?
-3. What signals would convince you that AI is improving product judgment rather than just increasing throughput?
-4. How would you design a forum where PMs, designers, engineers, and stakeholders can use AI support without flattening dissent?
-5. What is the smallest practical intervention that would increase agency without creating a new layer of process?
-6. Which parts of the COM-B diagnosis feel underweighted: capability, opportunity, or motivation?
-
 # Closing Thought
 
 The durable shift is not "product teams use AI." The durable shift is that product teams become better at orienting, diagnosing, prioritizing, acting, and adapting with clearer judgment and more distributed agency.
