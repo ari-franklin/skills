@@ -131,6 +131,8 @@ Use less detail as uncertainty increases. Near-term work may be concrete; long-t
 
 Include the roadmap, short rationale, evidence summary, progress measures, risks, assumptions, dependencies, open questions, and explicit uncertainty labels.
 
+When producing a visual artifact, output a standalone interactive HTML5 file rather than static markup. Use native browser capabilities where possible: drag-and-drop cards or milestones when the roadmap has movable items, interactive checklists for gates or readiness criteria, collapsible evidence/risk sections for dense context, and `localStorage` persistence for user-adjusted layout or checklist state. Include a reset control when state is persisted.
+
 ### 9. Validate Before Finalizing
 
 Run the quality gates below. Revise if any gate fails.
@@ -155,6 +157,22 @@ If evidence is weak, produce a provisional roadmap plus a validation plan instea
 ## Output Formats
 
 Choose the lightest useful format unless the user asks for a specific one.
+
+### Interactive HTML5 Roadmap
+
+Use this as the default for visual, stakeholder-ready, or shareable roadmap artifacts. Create a single `.html` file with embedded CSS and JavaScript. The artifact should be polished enough to open directly in a browser and use in a planning conversation.
+
+Minimum interaction expectations:
+
+- Drag-and-drop roadmap cards, bets, milestones, or lanes when the format contains reorderable or resequencable items
+- Automatic `localStorage` persistence for changed card order, lane placement, and checklist state
+- A visible reset control for persisted state
+- Interactive checkboxes for ramp gates, readiness checks, decision criteria, validation steps, or launch criteria
+- Collapsible sections for long evidence, risks, assumptions, dependencies, open questions, or defect definitions
+- Accessible focus states, semantic sections, sufficient contrast, and keyboard-friendly controls where feasible
+- No external dependencies, CDNs, build tools, package installs, backend calls, or non-portable assets
+
+If the user explicitly asks for a non-HTML format, provide that format instead. If the user asks for both a brief and an artifact, provide the brief plus the interactive HTML5 file.
 
 ### Roadmap Brief
 
