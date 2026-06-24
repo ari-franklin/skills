@@ -23,6 +23,10 @@ Produce a roadmap that helps the intended audience decide:
 
 When requested, also produce a standalone HTML visualization of the roadmap.
 
+## Required References
+
+Load `references/html-patterns.md` when the user asks for a visual roadmap, HTML export, stakeholder-ready artifact, or shareable roadmap file.
+
 ## When To Use
 
 Use this skill when the user asks to:
@@ -221,6 +225,8 @@ Outcome
 ## HTML Roadmap Export
 
 When the user asks for a visual roadmap, shareable artifact, stakeholder-ready view, or HTML export, create a standalone `roadmap.html` file unless they request another filename.
+
+Load `references/html-patterns.md` before creating the file.
 
 The HTML export must be:
 
