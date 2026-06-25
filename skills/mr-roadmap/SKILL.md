@@ -1,13 +1,13 @@
 ---
-name: roadmap-builder
-description: Use when creating, reshaping, critiquing, or validating a roadmap from notes, documents, issues, plans, metrics, decisions, risks, assumptions, dependencies, or repo context. Use for outcome roadmaps, strategy choice maps, milestones and markers, opportunity/solution trees, portfolio bets, Now/Next/Later roadmaps, quarterly or annual roadmaps, and visual HTML roadmap artifacts that help an audience decide what to do next, defer, commit to, or validate.
+name: mr-roadmap
+description: Globally invokable as $mr-roadmap. Use when creating, reshaping, critiquing, or validating a roadmap from notes, documents, issues, plans, metrics, decisions, risks, assumptions, dependencies, or repo context. Use for outcome roadmaps, strategy choice maps, milestones and markers, opportunity/solution trees, portfolio bets, Now/Next/Later roadmaps, quarterly or annual roadmaps, and visual HTML roadmap artifacts that help an audience decide what to do next, defer, commit to, or validate.
 license: MIT
 metadata:
   author: arifranklin
   version: "1.0"
 ---
 
-# Roadmap Builder
+# Mr Roadmap
 
 Create portable, evidence-based roadmap artifacts from available source material. Do not assume a product methodology, data model, repository structure, storage system, or company planning process unless the user provides one.
 
