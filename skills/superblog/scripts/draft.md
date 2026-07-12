@@ -13,9 +13,9 @@ Purpose: write a complete blog post in the superblog voice.
 
 ## Draft Requirements
 
-- Open with tension, a concrete moment, or a clear claim.
+- Open with tension, a concrete moment, or a clear claim that invites the reader in.
 - Include a principle, mental model, or constraint that reframes the issue.
-- Use examples to explain the idea.
+- Use one developed example when possible. Avoid example-only sentences and loose inventories.
 - Name at least one pitfall, limit, or competing interpretation.
 - End with a concise takeaway that feels earned.
 
@@ -33,7 +33,7 @@ Before returning the draft, make sure it has:
 If these are missing, add them to the draft instead of listing them only as revision notes.
 If adding them would require inventing the user's personal experience, ask for the missing story or clearly label the example as hypothetical or observed pattern.
 
-## Minimum Shape For Full Posts
+## Minimum Structure For Full Posts
 
 For a complete blog post, default to a substantive article, not a short note. A strong draft usually needs these beats:
 
@@ -56,6 +56,9 @@ For a complete blog post, default to a substantive article, not a short note. A 
 - Skeptical of process theater
 - Useful without sounding prescriptive
 - Specific enough that it could not have been written from the title alone
+- Positive-claim-first: avoid "not X, but Y" and "not because" constructions unless the misconception is the explicit subject.
+- Precise language: do not use "shape" for broad concepts unless literal visual form matters.
+- System-aware examples: when many examples are required, turn them into a chain, table, or diagram-ready structure.
 
 ## Paragraph Quality Threshold
 
@@ -66,5 +69,7 @@ Before returning a full draft, scan the body paragraphs.
 - Single-line paragraphs are allowed only for rare emphasis, section turns, or deliberately isolated lines.
 - Do not use more than one single-line body paragraph in a full article unless the source samples clearly require that rhythm.
 - If a draft has several consecutive one-line paragraphs, merge them into developed paragraphs or expand the reasoning.
+- If the opening feels like a dense abstract wall, replace it with a more inviting scene, pressure, or concrete claim before returning the draft.
+- If a sentence is only a list of examples, develop the strongest example or recast the list as a system relationship.
 
 Fail the draft if it reads like a stack of social-post lines instead of an essay.

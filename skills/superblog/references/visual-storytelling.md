@@ -38,7 +38,7 @@ A strong visual story usually follows this sequence:
 4. Turn: what changes when the reader sees it this way?
 5. Action: what should the reader do differently?
 
-Use visuals at the points where the reader would otherwise spend extra effort reconstructing the shape of the idea.
+Use visuals at the points where the reader would otherwise spend extra effort reconstructing the structure, sequence, or relationship in the idea.
 
 ## Selection Rules
 
@@ -48,6 +48,7 @@ Use visuals at the points where the reader would otherwise spend extra effort re
 - Use timelines to make sequence and change legible.
 - Use callouts to make a practical test easy to apply.
 - Use charts only when quantitative evidence is central and the chart type matches the analytical job.
+- When the prose needs many examples, roles, or factors to close the argument, consider whether they form a chain, dependency map, lifecycle, or table. Visualize that relationship only if it reduces reader effort.
 
 Chart shortcuts:
 

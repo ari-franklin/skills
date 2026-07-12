@@ -4,7 +4,7 @@
 
 Use diagrams when the structure of the idea is easier to understand visually than in prose alone.
 
-Pick diagrams by the shape of the idea, not by reflex. A diagram that does not carry meaning adds load and should be cut.
+Pick diagrams by the structure, sequence, or relationship in the idea, not by reflex. A diagram that does not carry meaning adds load and should be cut.
 
 In Substack HTML preview pages, use:
 

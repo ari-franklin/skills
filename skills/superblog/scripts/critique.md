@@ -22,3 +22,7 @@ Purpose: identify what is weak in a draft and provide concrete revision moves.
 - Treat "clean but boring" as a serious failure mode, not a minor style issue.
 - If the draft is surface-level, prescribe missing substance: scene, evidence, counterargument, implication, and decision rule.
 - Treat excessive single-line paragraphs as a structure problem. Recommend merging or developing them unless each one earns emphasis.
+- Treat a dense, abstract opening as a draft-level problem. Recommend a more inviting scene, pressure, or concrete claim.
+- Flag generic "shape" language unless it refers to literal visual form.
+- Flag negative-first constructions like "not X, but Y" and "not because" unless the reader misconception is the subject being examined.
+- Flag example-only sentences. Recommend developing one example or turning many necessary examples into a system chain, table, or diagram.

@@ -52,7 +52,7 @@ Do not use this skill for:
 Load only the references needed for the requested task:
 
 - `references/voice-and-tone.md`: voice, sentence style, and stance
-- `references/writing-patterns.md`: article shapes and section flow
+- `references/writing-patterns.md`: article structures and section flow
 - `references/audience.md`: reader assumptions and relevance filters
 - `references/recurring-themes.md`: preferred conceptual territory
 - `references/visual-metaphors.md`: concrete analogy patterns
@@ -70,12 +70,20 @@ Use samples sparingly for calibration:
 - `samples/lean-xp-isnt-for-acceleration.md`
 - `samples/how-a-real-team-used-principles-and-constraints.md`
 - `samples/lessons-from-office-space-conditions-for-empowerment.md`
+- `samples/ai-coding-for-individuals-vs-teams.md`
+- `samples/skulto-making-ai-skills-resusable.md`
+- `samples/against-being-data-driven.md`
+- `samples/outcomes-and-operative-phrases.md`
+- `samples/lean-plus-xp-isnt-for-acceleration.md`
+- `samples/be-a-weed.md`
+- `samples/why-ai-skills-exist-and-most-teams-will-struggle-with-them.md`
+- `samples/paradigms-that-keep-my-brain-from-exploding.md`
 
 All sample files should contain complete posts. If a sample is empty or marked as a placeholder, ignore it for voice calibration and flag the package issue.
 
 ## Companion Skill: Superloop
 
-Invoke `superloop` when the blog work needs deeper reasoning before prose work continues. Superblog owns the writing voice, article shape, and final draft. Superloop owns reasoning route selection when the idea, claim, or structure needs validation, prioritization, decomposition, or explanation.
+Invoke `superloop` when the blog work needs deeper reasoning before prose work continues. Superblog owns the writing voice, article structure, and final draft. Superloop owns reasoning route selection when the idea, claim, or structure needs validation, prioritization, decomposition, or explanation.
 
 Use `superloop` before drafting when:
 
@@ -110,6 +118,10 @@ This is required even if the user only asked for a draft — the reasoning route
 9. Do not return a surface-level draft. If the article could be summarized as a tidy heuristic without losing much, it is not deep enough yet.
 10. A post needs at least one of: a real scene, a specific observed example, a sharp counterargument, or a surprising second-order implication. Prefer two or more.
 11. Do not stack single-line paragraphs. They are emphasis devices, not the default rhythm. A full draft should usually have zero or one single-line paragraph outside headings, lists, quotes, and section transitions.
+12. Make the opening compelling and inviting. Draw the reader into the tension through the writing itself instead of confronting them with a dense wall of abstraction.
+13. Avoid generic references to the "shape" of broad ideas, arguments, emotions, work, or systems. Use more precise language such as pattern, structure, sequence, pressure, relationship, feedback loop, or tradeoff. Use "shape" only when the physical or visual form is literally meaningful.
+14. State the positive claim directly. Avoid leading with "the hard part is not X, it is Y," "not because," or similar negative-first constructions. Use the negative case only when the reader's misconception is the actual tension being examined, and keep it brief.
+15. Avoid paragraphs or sentences made entirely of example lists. Prefer one specific example developed with experiential detail. When many factors truly matter, present them as a connected chain, system, dependency map, table, or diagram instead of a loose inventory.
 
 ## Workflow
 
@@ -118,7 +130,7 @@ This is required even if the user only asked for a draft — the reasoning route
 Infer the mode from the request:
 
 - `incubate`: test whether an idea has enough tension, novelty, and usefulness
-- `outline`: shape the argument before drafting
+- `outline`: structure the argument before drafting
 - `draft`: write the post
 - `critique`: identify what is weak and how to improve it
 - `compress`: shorten without flattening the idea
@@ -178,7 +190,7 @@ Load `references/argument-depth.md` when the idea feels tidy, familiar, short, o
 
 ### 4. Identify Visual Story Opportunities
 
-When the user asks for visual storytelling, a visual artifact, diagrams, images, Substack HTML, or a more memorable article shape, load `references/visual-storytelling.md`.
+When the user asks for visual storytelling, a visual artifact, diagrams, images, Substack HTML, or a more memorable article structure, load `references/visual-storytelling.md`.
 
 Identify whether the article needs:
 
@@ -190,9 +202,9 @@ Identify whether the article needs:
 
 Only add visual devices after the thesis, reader tension, and story sequence are stable. If no visual device reduces reader effort, say so and keep the post prose-led.
 
-### 5. Draft In The Target Shape
+### 5. Draft In The Target Structure
 
-Prefer this shape unless the material suggests a better one:
+Prefer this structure unless the material suggests a better one:
 
 1. Open with a concrete moment, friction, or provocative claim.
 2. Name the false binary or common mistake.
@@ -241,7 +253,7 @@ Prefer 1-2 image concepts per post. Each concept must clarify the argument or te
 
 ### 8. Create Diagrams When Requested Or Clearly Useful
 
-Create diagrams after the outline or draft has a stable argument and the idea has a shape worth making visible. Load `references/visual-storytelling.md`, `references/diagrams.md`, and `scripts/diagram.md`.
+Create diagrams after the outline or draft has a stable argument and a structure worth making visible. Load `references/visual-storytelling.md`, `references/diagrams.md`, and `scripts/diagram.md`.
 
 Prefer one diagram per post unless the user explicitly asks for more. Each diagram must clarify the argument's structure, flow, lifecycle, timeline, system interaction, or before/after change. If the diagram does not reduce reader effort, omit it.
 

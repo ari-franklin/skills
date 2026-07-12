@@ -1,6 +1,6 @@
 # Writing Patterns
 
-Use these patterns to shape posts. Do not force every article into the same template.
+Use these patterns to structure posts. Do not force every article into the same template.
 
 ## Story-Led Principle
 
@@ -41,7 +41,7 @@ Best for: concepts like real options, constraints, autonomy, resilience, or deci
 - Use a concrete problem before abstraction.
 - Put the strongest disagreement near the top.
 - Include a competing interpretation so the piece does not feel one-sided.
-- Let examples carry explanation when possible.
+- Let one well-developed example carry explanation when possible.
 - Make headings clear, not cute.
 - End sections with a sentence that advances the argument.
 - Explain why the old rule or common belief used to make sense before arguing that it changed.
@@ -54,10 +54,13 @@ Best for: concepts like real options, constraints, autonomy, resilience, or deci
 - Replace generic claims with a specific workplace pressure.
 - Convert advice into a principle plus a constraint.
 - Cut throat-clearing introductions.
+- Rewrite dense openings so they invite the reader into the tension through a scene, pressure, or recognizable decision.
 - Remove any paragraph that repeats the thesis without adding tension, example, or consequence.
 - Make the ending more pointed than the opening.
 - If the draft feels like a LinkedIn post, add story, tension, and consequence before polishing sentences.
 - If revision notes say "add an example," add the example before returning the final draft.
+- Replace example-only sentences with one concrete example developed in enough detail to make the point felt.
+- When the argument depends on many roles, forces, or factors, describe the chain or system they form. Use a diagram, table, or dependency map if prose would read like an inventory.
 
 ### Avoid
 
@@ -101,7 +104,45 @@ A good body paragraph usually does at least two of these:
 
 This construction is overused and often shortcuts the reasoning.
 
-Instead of replacing one idea with another, show why the first explanation is incomplete. Let readers arrive at the conclusion.
+Instead of replacing one idea with another, state the real claim directly and then make it stick through observation, mechanism, and consequence.
+
+Use the negative case only when the reader's likely misconception is the actual tension being examined. Even then, keep the negative case short and move quickly into what is true.
+
+Not:
+
+The hard part was not splitting the system apart. The hard part was everything that happened after the split.
+
+Better:
+
+After the split, the complexity moved into handoffs, contracts, release timing, and ownership. The system looked cleaner on paper, but the work became harder to coordinate.
+
+### Avoid generic "shape" language
+
+"Shape" is often too broad to carry meaning when discussing concepts, systems, emotions, or arguments.
+
+Not:
+
+The comparison works because the emotional shape is familiar.
+
+Better:
+
+The comparison works because the reader recognizes the same pattern of hope, overconfidence, and delayed cost.
+
+Use "shape" only when the physical or visual form matters. Otherwise choose the precise word: structure, pattern, sequence, relationship, pressure, feedback loop, boundary, tradeoff, or failure mode.
+
+### Avoid example inventories
+
+Do not write sentences or paragraphs made entirely of loosely connected examples.
+
+Not:
+
+One agent researches. One writes. One reviews. One executes. One monitors.
+
+Better:
+
+A research agent finds raw material, a writing agent turns it into a draft, and a review agent pushes back before anything ships. The useful part is not the list of roles; it is the handoff chain and the judgment each step adds or loses.
+
+If the list genuinely needs many parts to close the argument, own that complexity. Present it as a system chain, table, dependency map, or small diagram instead of a pile of examples.
 
 ### Avoid words like “quietly”
 

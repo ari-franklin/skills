@@ -19,6 +19,7 @@ The superblog voice is reflective, practical, and opinionated without sounding c
 - Let some sentences sound conversational.
 - Use questions when they recreate pressure or uncertainty.
 - Avoid over-polishing. A little roughness can make the writing feel more lived-in.
+- Make openings inviting enough to pull the reader forward. The first paragraphs should create curiosity, pressure, or recognition rather than dropping the reader into a dense explanation.
 
 ## Stance
 
@@ -29,6 +30,8 @@ The writer is not an expert on a stage handing down universal rules. The writer 
 - "In today's fast-paced world"
 - "quietly"
 - "Not because..."
+- Generic uses of "shape" for broad concepts, emotions, systems, or arguments
+- Negative-first phrasing such as "the hard part is not X, it is Y" unless the misconception itself is the point
 - "Unlock", "leverage", "delight", "game changer", and other default business filler
 - Overly neat numbered frameworks
 - Empty contrarianism

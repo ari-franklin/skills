@@ -8,7 +8,7 @@ Purpose: convert a validated idea into a blog structure that is strong enough to
 - Subtitle or deck
 - One-sentence thesis
 - Intended reader
-- Opening story or friction
+- Opening story or friction that draws the reader in
 - Old rule, common belief, or default interpretation
 - Why the old belief made sense
 - Mechanism: what is actually changing or causing the problem
@@ -25,6 +25,9 @@ Purpose: convert a validated idea into a blog structure that is strong enough to
 - Every section should have a job. If a section only repeats the thesis, merge it or cut it.
 - The outline should make the eventual post feel necessary, not like an expanded social post.
 - If the outline lacks story, tension, and consequence, fix the outline before drafting.
+- The opening should feel inviting, not like a dense thesis dump.
+- If the argument requires many examples or roles, outline the system chain they form rather than listing them as independent bullets.
+- Avoid generic "shape" language and negative-first phrasing in section intent.
 
 ## Depth Check
 
