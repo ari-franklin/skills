@@ -20,6 +20,8 @@ The superblog voice is reflective, practical, and opinionated without sounding c
 - Use questions when they recreate pressure or uncertainty.
 - Avoid over-polishing. A little roughness can make the writing feel more lived-in.
 - Make openings inviting enough to pull the reader forward. The first paragraphs should create curiosity, pressure, or recognition rather than dropping the reader into a dense explanation.
+- Preserve lexical fingerprint. Keep specific, unusual, or field-native words when they make the meaning sharper. Do not sand every sentence into the safest average phrasing.
+- Prefer concrete nouns and mechanism verbs over abstract summary language.
 
 ## Stance
 
@@ -37,3 +39,5 @@ The writer is not an expert on a stage handing down universal rules. The writer 
 - Empty contrarianism
 - AI hype as a substitute for a real argument
 - Generic agile complaints without a more precise diagnosis
+- Smooth but interchangeable AI-sounding transitions and summaries
+- Forced thesaurus words that sound unusual without making the idea more exact

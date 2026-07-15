@@ -61,8 +61,28 @@ Best for: concepts like real options, constraints, autonomy, resilience, or deci
 - If revision notes say "add an example," add the example before returning the final draft.
 - Replace example-only sentences with one concrete example developed in enough detail to make the point felt.
 - When the argument depends on many roles, forces, or factors, describe the chain or system they form. Use a diagram, table, or dependency map if prose would read like an inventory.
+- Run a lexical fingerprint pass: find the blandest nouns and verbs, then replace them with the actual artifact, pressure, mechanism, or consequence.
+- Restore memorable user phrasing when revision has made the draft cleaner but less authored.
 
 ### Avoid
+
+### Avoid average-language drift
+
+Do not revise toward the median.
+
+Weak AI-like prose often sounds smooth because it averages away the writer's attention. It replaces a concrete pressure with "challenge," a mechanism with "impact," and a lived observation with "this highlights."
+
+During revision, keep language that is specific, strange, or domain-native when it earns its place.
+
+Not:
+
+This creates alignment and improves team effectiveness.
+
+Better:
+
+This stops the roadmap from becoming a polite argument about whose urgency gets disguised as strategy.
+
+The better sentence is not better because it is more ornate. It is better because its nouns and verbs know what room they are in.
 
 ### Avoid opening with a grand statement
 

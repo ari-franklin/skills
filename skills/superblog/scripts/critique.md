@@ -11,6 +11,7 @@ Purpose: identify what is weak in a draft and provide concrete revision moves.
 - Structure issues
 - Missing story, evidence, or counterargument
 - Line-level patterns to revise
+- Lexical fingerprint: where the language feels authored versus averaged
 - Recommended next version
 
 ## Critique Rules
@@ -26,3 +27,5 @@ Purpose: identify what is weak in a draft and provide concrete revision moves.
 - Flag generic "shape" language unless it refers to literal visual form.
 - Flag negative-first constructions like "not X, but Y" and "not because" unless the reader misconception is the subject being examined.
 - Flag example-only sentences. Recommend developing one example or turning many necessary examples into a system chain, table, or diagram.
+- Flag smooth, interchangeable AI-sounding prose. Recommend more specific nouns, mechanism verbs, concrete workplace artifacts, and restored user phrasing.
+- Do not recommend unusual words for their own sake. Recommend sharper words only when they improve precision, texture, or voice.

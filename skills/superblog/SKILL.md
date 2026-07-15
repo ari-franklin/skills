@@ -52,6 +52,7 @@ Do not use this skill for:
 Load only the references needed for the requested task:
 
 - `references/voice-and-tone.md`: voice, sentence style, and stance
+- `references/human-shaped-language.md`: lexical specificity, personal vocabulary, and anti-slop checks
 - `references/writing-patterns.md`: article structures and section flow
 - `references/audience.md`: reader assumptions and relevance filters
 - `references/recurring-themes.md`: preferred conceptual territory
@@ -122,6 +123,7 @@ This is required even if the user only asked for a draft — the reasoning route
 13. Avoid generic references to the "shape" of broad ideas, arguments, emotions, work, or systems. Use more precise language such as pattern, structure, sequence, pressure, relationship, feedback loop, or tradeoff. Use "shape" only when the physical or visual form is literally meaningful.
 14. State the positive claim directly. Avoid leading with "the hard part is not X, it is Y," "not because," or similar negative-first constructions. Use the negative case only when the reader's misconception is the actual tension being examined, and keep it brief.
 15. Avoid paragraphs or sentences made entirely of example lists. Prefer one specific example developed with experiential detail. When many factors truly matter, present them as a connected chain, system, dependency map, table, or diagram instead of a loose inventory.
+16. Preserve human-shaped language. Keep the user's distinctive nouns, verbs, odd turns of phrase, and domain-specific vocabulary when they sharpen meaning. Do not average the prose into safe, smooth, generic wording. Weird is useful when it is precise.
 
 ## Workflow
 
@@ -244,6 +246,8 @@ Check the draft against the references:
 - Are most body paragraphs developed into 2-5 sentence units with a clear idea, reason, and consequence?
 - Are there more than one or two single-line body paragraphs? If yes, merge or develop them before returning the draft.
 - Does any one-line paragraph earn its emphasis by landing a major turn, or is it just creating artificial drama?
+- Does the language have a recognizable fingerprint: specific verbs, concrete nouns, field vocabulary, and one or two phrases only this writer would likely choose?
+- Did any revision replace a vivid or strange phrase with a safer synonym? If yes, restore the sharper version unless it is confusing or performative.
 
 ### 7. Create Image Briefs When Requested
 
