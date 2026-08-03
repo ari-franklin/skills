@@ -1,7 +1,6 @@
 ---
 name: story-slicer
-description: Breaks ideas, product designs, epics, and requirements into customer- and outcome-centric vertical-slice user stories, then writes concise Jira-ready stories to a file and can optionally create Jira tickets from them. Use when the user asks to decompose an idea or design into stories, improve story slicing, write outcome-focused Jira stories, or avoid horizontal UI/API/database task breakdowns.
-license: MIT
+description: Breaks ideas, product designs, epics, and requirements into customer- and outcome-centric vertical-slice user stories, then writes concise backlog-ready stories to a file and can optionally create tickets from them. Use when the user asks to decompose an idea or design into stories, improve story slicing, write outcome-focused stories, or avoid horizontal UI/API/database task breakdowns.
 metadata:
   author: codex
   version: "1.1"
@@ -9,20 +8,20 @@ metadata:
 
 # Story Slicer
 
-Turn ideas, designs, and epics into the smallest set of customer-visible stories that deliver measurable value, save them in a Jira-ready file, and optionally create the Jira issues after review.
+Turn ideas, designs, and epics into the smallest set of customer-visible stories that deliver measurable value, save them in a copy-ready file, and optionally create the issues after review in user preferred backlog tool.
 
 ## Outcome
 
 Produce:
 
 - A thin set of vertical slices ordered by learning and user value
-- Concise Jira-ready story titles and descriptions
+- Concise story titles and descriptions
 - Acceptance criteria that describe outcomes, not implementation tasks, and are always written in Gherkin
 - Story titles written as plain-language user experience statements
 - Value stories written in Jobs To Be Done format: `When / I want / so that`
 - Outcome signals that explain what value each slice proves or unlocks
 - Clear calls on what should stay a story versus become a subtask, spike, or chore
-- A saved markdown file containing the final Jira-ready stories
+- A saved markdown file containing the final stories
 
 ## When To Use
 
@@ -31,13 +30,12 @@ Use this skill when the user:
 - Wants to break a feature, initiative, design, or epic into user stories
 - Asks for customer-centric or outcome-centric story writing
 - Wants vertical value slices instead of frontend/backend/database task breakdowns
-- Needs Jira stories created from a design, brief, or workshop output
+- Needs stories created from a design, brief, or workshop output
 
 Do not use this skill for:
 
 - Full solution ideation inside a codebase; use `ideate` first
 - Step-by-step implementation planning; use `planner`
-- Direct Jira operations with already-written stories; use `jira`
 
 ## Core Rules
 
@@ -47,8 +45,8 @@ Do not use this skill for:
 4. Do not turn UI work, API work, database work, or test work into separate user stories unless each item delivers standalone value to a real user.
 5. Put internal-only work into subtasks, chores, or spikes unless it is the only safe way to unlock the next value slice.
 6. If a story needs more than one Gherkin scenario, treat that as a sign the slice may still be too broad and try to split it into separate stories first.
-7. Before creating Jira issues, confirm the project key, issue type, title set, and description text.
-8. Before drafting stories, saving files, or creating Jira issues, ask clarifying questions and wait for the user's answers. Do not assume missing scenario, analytics, or notes context when the user is available to answer.
+7. Before creating issues, confirm the project key, issue type, title set, and description text.
+8. Before drafting stories, saving files, or creating issues, ask clarifying questions and wait for the user's answers. Do not assume missing scenario, analytics, or notes context when the user is available to answer.
 
 ## Process
 
@@ -160,17 +158,17 @@ A story is ready only if:
 If several stories depend on the same invisible platform work, create one enabling `Chore` or `Spike` only when necessary and keep the customer-facing stories separate.
 Apply this richer format to value stories only. Chores, spikes, and bugs can keep their simpler structures.
 
-### Phase 5: Prepare Jira Output
+### Phase 5: Prepare Output
 
 Format the output in this order:
 
 1. Short slicing rationale
 2. Story sequence table
-3. Full Jira-ready story bodies
+3. Full story bodies
 4. Optional enabling chores or spikes
 
-Use the Jira body template in `references/story-quality-checklist.md`.
-Default to concise Jira-ready writing rather than design-doc prose. Keep each story easy to paste into Jira without trimming or rewriting.
+Use the body template in `references/story-quality-checklist.md`.
+Default to concise writing rather than design-doc prose. Keep each story easy to paste without trimming or rewriting.
 Treat the clarification set from Phase 1 as mandatory gating input, not an optional prompt.
 Ask which platform-specific scenarios such as mobile, desktop, app, or other surfaces should be included, and include only the scenarios that apply.
 Ask whether there are analytics, instrumentation, or monitoring requirements that should be represented as a scenario in the same value story.
@@ -183,7 +181,7 @@ Do not save a story file until the mandatory clarification questions have been a
 
 Write the completed stories to a markdown file using this default path pattern:
 
-`.kohls/stories/YYYY-MM-DD-JIRAID-short-name/MM-DD-YY Feature or Epic Name.md`
+`.kohls/stories/YYYY-MM-DD-ID-short-name/MM-DD-YY Feature or Epic Name.md`
 
 Naming rules:
 
@@ -192,7 +190,7 @@ Naming rules:
 - Filename:
   - `MM-DD-YY`: current date in compact human-readable form
   - `Feature or Epic Name`: preserve the readable feature or epic name so the file is easy to find later
-- `JIRAID`: uppercase Jira key if known, otherwise `NA`
+- `ID`: uppercase key if known, otherwise `NA`
 - `short-name`: short lowercase hyphenated slug derived from the feature or epic title
 - Replace filename-forbidden characters such as `/` or `:` with safe separators like `-`
 - If the feature or epic name is missing, use `Story Slices`
@@ -203,25 +201,23 @@ After saving:
 
 1. Tell the user the saved path
 2. Summarize the story count and any chores or spikes
-3. Ask whether to create Jira issues from the saved stories
+3. Ask whether to create issues from the saved stories
 
-### Phase 7: Optionally Create Jira Issues
+### Phase 7: Optionally Create Issues
 
-When the user wants Jira tickets created:
+When the user wants tickets created:
 
 1. Confirm `project`, `issue type`, `size`, and the final story text.
-2. If this repository's `jira` skill is available, use it to create the issues.
-3. Pass the story description and the acceptance criteria separately so Jira's dedicated Acceptance Criteria field is populated. Do not rely on Jira creation to recover AC from the description later unless you are handling an older story format.
-4. For value stories, treat the full `## AC` section as the source for the Jira Acceptance Criteria field.
-5. Create customer-facing work as `Story` by default.
-6. Use `Chore` for operational/internal work and `Spike` for time-boxed discovery.
-7. Report the created issue keys back in story order.
+2. For value stories, treat the full `## AC` section as the source for the Acceptance Criteria field.
+3. Create customer-facing work as `Story` by default.
+4. Use `Chore` for operational/internal work and `Spike` for time-boxed discovery.
+5. Report the created issue keys back in story order.
 
 Do not create tickets without explicit confirmation of the final text.
 
 ## Output Format
 
-Use this structure unless the user asks for another format. Write it as if it will be pasted directly into Jira:
+Use this structure unless the user asks for another format. Write it as if it will be pasted directly:
 
 ```markdown
 ## Slicing Rationale
@@ -231,7 +227,7 @@ Use this structure unless the user asks for another format. Write it as if it wi
 | Order | Story | User outcome | Outcome signal | Size |
 | --- | --- | --- | --- | --- |
 
-## Jira-Ready Stories
+## Backlog Ready Stories
 ### Story 1: <title>
 Issue type: Story
 Suggested size: S
@@ -276,10 +272,10 @@ Dependencies
 ```
 
 When saving to file, include the full output in the markdown file, not just the story bodies.
-When creating Jira tickets from this format, map:
+When creating tickets from this format, map:
 
-- Story `Description` plus `## Value` plus `## Notes` into the Jira description body
-- Story `## AC` into Jira's Acceptance Criteria field
+- Story `Description` plus `## Value` plus `## Notes` into the description body
+- Story `## AC` into description body
 
 ## Decision Rules
 
@@ -290,7 +286,7 @@ Use these rules when the slicing choice is unclear:
 - If the argument for a story starts with "engineering needs to", it is probably not a customer story.
 - If the story mixes onboarding, permissions, reporting, and notifications, split by primary outcome.
 - If the story exists only to support future work, consider `Chore` or `Spike` instead.
-- If the user asks for stories, assume they want Jira-ready wording unless they explicitly ask for a workshop or design format.
+- If the user asks for stories, assume they want backlog-ready wording unless they explicitly ask for a workshop or design format.
 - If the user asks for story output and does not say where to store it, save it to the default dated feature-name file path before responding.
 - If a title starts with `Show`, `Add`, `Build`, `Create`, or another delivery verb, rewrite it as a user experience statement instead.
 - If a title mostly describes UI behavior like `see`, `view`, or `access`, rewrite it to emphasize the user's improved experience, confidence, speed, continuity, or control.
@@ -304,7 +300,7 @@ Use these rules when the slicing choice is unclear:
 Input:
 
 ```text
-Break "customers can save a shopping list and share it with family members" into Jira stories.
+Break "customers can save a shopping list and share it with family members" into backlog stories.
 ```
 
 Good result:
