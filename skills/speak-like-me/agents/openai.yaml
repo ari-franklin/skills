@@ -1,0 +1,4 @@
+interface:
+  display_name: "Speak Like Me"
+  short_description: "Rewrite text in Ari's spoken voice"
+  default_prompt: "Use $speak-like-me to rewrite this draft in my voice without changing the substance."
