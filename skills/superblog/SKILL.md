@@ -118,12 +118,26 @@ This is required even if the user only asked for a draft — the reasoning route
 8. Avoid generic "in today's fast-paced world" openings and tidy numbered-list essays unless the content genuinely calls for a list.
 9. Do not return a surface-level draft. If the article could be summarized as a tidy heuristic without losing much, it is not deep enough yet.
 10. A post needs at least one of: a real scene, a specific observed example, a sharp counterargument, or a surprising second-order implication. Prefer two or more.
-11. Do not stack single-line paragraphs. They are emphasis devices, not the default rhythm. A full draft should usually have zero or one single-line paragraph outside headings, lists, quotes, and section transitions.
+11. Use zero one-sentence body paragraphs in drafts, critiques, conclusions, and rewrites unless the user explicitly asks for them. A short section can be one or two sentences, but each paragraph should still be developed enough to sound natural rather than staged for emphasis.
 12. Make the opening compelling and inviting. Draw the reader into the tension through the writing itself instead of confronting them with a dense wall of abstraction.
 13. Avoid generic references to the "shape" of broad ideas, arguments, emotions, work, or systems. Use more precise language such as pattern, structure, sequence, pressure, relationship, feedback loop, or tradeoff. Use "shape" only when the physical or visual form is literally meaningful.
-14. State the positive claim directly. Avoid leading with "the hard part is not X, it is Y," "not because," or similar negative-first constructions. Use the negative case only when the reader's misconception is the actual tension being examined, and keep it brief.
+14. State the positive claim directly. Avoid "not that, it's this" constructions, including patterns like "the hard part is not X, it is Y," "the work is not X, it is Y," "this is not X, it is Y," "it is not about X, it is about Y," and "not because X, but because Y." Do not include this phrasing in shared drafts or final outputs. Use the negative case only when the reader's misconception is the actual tension being examined, and keep it brief.
 15. Avoid paragraphs or sentences made entirely of example lists. Prefer one specific example developed with experiential detail. When many factors truly matter, present them as a connected chain, system, dependency map, table, or diagram instead of a loose inventory.
 16. Preserve human-shaped language. Keep the user's distinctive nouns, verbs, odd turns of phrase, and domain-specific vocabulary when they sharpen meaning. Do not average the prose into safe, smooth, generic wording. Weird is useful when it is precise.
+17. Keep language simple and thoughtful instead of overly declarative. Prefer first-person exploration, grounded advice, and "here is how I am thinking about it" over black-and-white declarations like "this is," "this is not," and "this is why."
+18. Do not use the phrases "this matters," "this is useful," "has to earn," "earns its place," "idea carrying," or "carrying the idea." Replace them with plainer language that says what changed, what became clearer, or why the reader should care.
+
+## Always Run These Style Checks
+
+Every time this skill critiques, rewrites, drafts, compresses, or concludes a post, evaluate the output against these checks before returning it:
+
+- Is the language simple enough that it sounds like Arif thinking out loud, not an editor making a ruling?
+- Does the prose stay thoughtful and first-person where appropriate instead of becoming black-and-white?
+- Are there zero one-sentence body paragraphs?
+- Did you remove all "not that, it's this" constructions, including "not X, but Y," "not about X, about Y," and "the work is not X, it is Y" phrasing?
+- Did you remove or avoid the banned phrases: "this matters," "this is useful," "has to earn," "earns its place," "idea carrying," and "carrying the idea"?
+- Did you simplify paragraphs that only exist to say "Person A does X, Person B does Y, Person C does Z" when the actual point can be said directly?
+- Did you preserve short clear sections when they work, instead of padding them into long paragraphs for polish?
 
 ## Workflow
 
@@ -244,8 +258,8 @@ Check the draft against the references:
 - Would a reader who already agrees with the headline still learn something?
 - Is there enough story, specificity, and friction to avoid sounding like an AI summary?
 - Are most body paragraphs developed into 2-5 sentence units with a clear idea, reason, and consequence?
-- Are there more than one or two single-line body paragraphs? If yes, merge or develop them before returning the draft.
-- Does any one-line paragraph earn its emphasis by landing a major turn, or is it just creating artificial drama?
+- Are there any one-sentence body paragraphs? If yes, merge, develop, or cut them before returning the draft.
+- Are any short sections being padded with contrived lists of examples? If yes, simplify the language and say the actual point directly.
 - Does the language have a recognizable fingerprint: specific verbs, concrete nouns, field vocabulary, and one or two phrases only this writer would likely choose?
 - Did any revision replace a vivid or strange phrase with a safer synonym? If yes, restore the sharper version unless it is confusing or performative.
 
@@ -303,3 +317,5 @@ When writing a complete post, include:
 - One explanatory diagram, if useful or requested
 - A Substack-ready HTML artifact, if useful or requested
 - A short revision note listing the two or three biggest improvement opportunities
+
+Before returning any complete post, critique, compression, or rewritten section, confirm internally that the always-run style checks passed. If a check fails, revise the output before showing it.
