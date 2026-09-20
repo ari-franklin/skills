@@ -1,0 +1,23 @@
+{
+  "skill_name": "speak-like-me",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Rewrite this interview answer in my voice without changing the meaning: I think the influence has to be earned through useful work. I would begin by owning Credit Building well, building trust with PMs and cross-functional leaders, and understanding where the organization already has strong practices. From there I would help with the problems people actually feel.",
+      "expected_output": "An interview-appropriate rewrite that preserves the sequence and meaning but does not say influence, trust, credibility, permission, or authority is earned. It should use Ari's more natural framing, such as influence starting with being useful, doing the work well, building trust, and helping with problems people actually feel.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Rewrite this in my voice: She earned a performance bonus and an industry award after exceeding the annual target.",
+      "expected_output": "A rewrite that may retain the word earned because the bonus and award are tangible outcomes received through effort. The skill should not remove every use of earned.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Rewrite this interview answer in my voice: Before asking teams to commit, I work to earn their trust and establish influence by demonstrating value.",
+      "expected_output": "A plain-spoken interview answer that preserves the intent but replaces earn-their-trust language with building trust, being useful, showing value, creating shared context, or helping teams make a better decision.",
+      "files": []
+    }
+  ]
+}

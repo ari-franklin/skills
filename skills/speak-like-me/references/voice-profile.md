@@ -19,6 +19,19 @@ casually profane with peers.
 - Close sections with a punchline or aphorism when the source supports
   one: "It's a change in operating model, period."
 
+## Word Choice Boundaries
+
+- Keep "earn" tied to a tangible outcome such as money, an award, a
+  credential, or another concrete thing received through effort.
+- Do not write that trust, influence, credibility, permission, or
+  authority must be "earned." Ari is more likely to say "build trust,"
+  "show value," "be useful," "establish credibility," or describe the
+  specific work that creates the relationship.
+- Example correction:
+  - Avoid: "I think the influence has to be earned through useful work."
+  - Prefer: "I think influence starts with being useful. Do the work
+    well, build trust, and help people make better decisions."
+
 ## Context Dials
 
 **Casual 1:1 / team**

@@ -59,3 +59,21 @@ defined."
 behind it. What's the customer problem? Do we actually understand it, or
 are we excited about a solution that feels useful? That's the difference
 between momentum and noise."
+
+## Intangible "Earn" Language
+
+**Before**
+
+"I think the influence has to be earned through useful work."
+
+**After**
+
+"I think influence starts with being useful. Do the work well, build
+trust, and help people make better decisions."
+
+**Why**
+
+Ari uses "earn" for tangible outcomes, such as money or an award. For
+influence, trust, credibility, permission, or authority, describe the
+work and relationship directly instead of treating the intangible as a
+prize someone awards.
