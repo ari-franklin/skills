@@ -122,10 +122,10 @@ This is required even if the user only asked for a draft — the reasoning route
 12. Make the opening compelling and inviting. Draw the reader into the tension through the writing itself instead of confronting them with a dense wall of abstraction.
 13. Avoid generic references to the "shape" of broad ideas, arguments, emotions, work, or systems. Use more precise language such as pattern, structure, sequence, pressure, relationship, feedback loop, or tradeoff. Use "shape" only when the physical or visual form is literally meaningful.
 14. State the positive claim directly. Avoid "not that, it's this" constructions, including patterns like "the hard part is not X, it is Y," "the work is not X, it is Y," "this is not X, it is Y," "it is not about X, it is about Y," and "not because X, but because Y." Do not include this phrasing in shared drafts or final outputs. Use the negative case only when the reader's misconception is the actual tension being examined, and keep it brief.
-15. Avoid paragraphs or sentences made entirely of example lists. Prefer one specific example developed with experiential detail. When many factors truly matter, present them as a connected chain, system, dependency map, table, or diagram instead of a loose inventory.
+15. Avoid paragraphs built from repetitive mini-examples or descriptive sequences that do not advance the reasoning. A run of simple subject-verb sentences does not become compelling through accumulation, and separating statements with periods does not make them more forceful. Prefer one example that reveals the mechanism or consequence. End the paragraph by stating the point in literal language; do not rely on a compressed contrast or aphoristic pair that forces the reader to invent the connection. If the paragraph adds no reasoning beyond its examples, simplify it or delete it instead of polishing it.
 16. Preserve human-shaped language. Keep the user's distinctive nouns, verbs, odd turns of phrase, and domain-specific vocabulary when they sharpen meaning. Do not average the prose into safe, smooth, generic wording. Weird is useful when it is precise.
 17. Keep language simple and thoughtful instead of overly declarative. Prefer first-person exploration, grounded advice, and "here is how I am thinking about it" over black-and-white declarations like "this is," "this is not," and "this is why."
-18. Do not use the phrases "this matters," "this is useful," "has to earn," "earns its place," "idea carrying," or "carrying the idea." Replace them with plainer language that says what changed, what became clearer, or why the reader should care.
+18. Do not use the phrases "this matters," "this is useful," "has to earn," "earns its place," "idea carrying," or "carrying the idea." Avoid applying physical verbs such as "carry" and "earn" to ideas, sentences, arguments, evidence, or other inanimate abstractions unless the literal meaning applies. Replace them with direct language that says what the sentence means, what changed, or why the reader should care.
 
 ## Always Run These Style Checks
 
@@ -137,6 +137,9 @@ Every time this skill critiques, rewrites, drafts, compresses, or concludes a po
 - Did you remove all "not that, it's this" constructions, including "not X, but Y," "not about X, about Y," and "the work is not X, it is Y" phrasing?
 - Did you remove or avoid the banned phrases: "this matters," "this is useful," "has to earn," "earns its place," "idea carrying," and "carrying the idea"?
 - Did you simplify paragraphs that only exist to say "Person A does X, Person B does Y, Person C does Z" when the actual point can be said directly?
+- Does every example paragraph reveal a mechanism or consequence, and does its ending state the meaning literally instead of gesturing at it through a compressed contrast?
+- Did you remove repetitive sentence patterns that manufacture punchiness without adding reasoning?
+- Did you replace metaphorical verbs attached to abstract subjects with literal language when the metaphor makes the reader interpret the intended meaning?
 - Did you preserve short clear sections when they work, instead of padding them into long paragraphs for polish?
 
 ## Workflow
