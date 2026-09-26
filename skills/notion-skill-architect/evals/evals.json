@@ -1,0 +1,40 @@
+{
+  "skill_name": "notion-skill-architect",
+  "evals": [
+    {
+      "id": 1,
+      "name": "clear-conversion-request",
+      "prompt": "Convert this complete writing skill into an optimized Notion skill. It includes SKILL.md, six workflow files, references, examples, and evals.",
+      "expected_output": "The skill audits every supplied file and returns only a source audit, proposed hierarchy, and routing map. It does not create Notion pages before approval.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "ambiguous-architecture-request",
+      "prompt": "Clean up this skill in Notion. It is hard to navigate.",
+      "expected_output": "The skill distinguishes an architecture review from immediate migration, inspects the available source, identifies missing context that would materially affect the proposal, and preserves the approval gate.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "non-skill-request",
+      "prompt": "Turn these meeting notes into a project update in Notion.",
+      "expected_output": "The skill should not treat ordinary note formatting as an agent-skill architecture migration and should route the request elsewhere.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "missing-source-material",
+      "prompt": "Rebuild my agent skill in Notion, but I have not provided the current skill files or a link to them.",
+      "expected_output": "The skill requests access to the complete source before auditing and does not invent the current contract or create a speculative page tree.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "conditional-resources-and-new-sources",
+      "prompt": "Migrate this skill after approval. It includes an HTML artifact, a local preview script, two near-duplicate samples, a substantial rubric, and three new articles I want to use as references.",
+      "expected_output": "The skill classifies each article before using it, keeps local utilities out of Notion unless they serve a clear consumer, surfaces duplicate samples, separates the rubric from runtime instructions, preserves asset-like files appropriately, and validates explicit routing after migration.",
+      "files": []
+    }
+  ]
+}
