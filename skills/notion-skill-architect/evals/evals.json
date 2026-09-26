@@ -35,13 +35,6 @@
       "prompt": "Migrate this skill after approval. It includes an HTML artifact, a local preview script, two near-duplicate samples, a substantial rubric, and three new articles I want to use as references.",
       "expected_output": "The skill classifies each article before using it, keeps local utilities out of Notion unless they serve a clear consumer, surfaces duplicate samples, separates the rubric from runtime instructions, preserves asset-like files appropriately, and validates explicit routing after migration.",
       "files": []
-    },
-    {
-      "id": 6,
-      "name": "formulaic-punchline-contrast",
-      "prompt": "Add this prose example to the skill's evaluation criteria: 'The strange part is not that the child has a new source of information. It is that the source can answer as if it knows the child.'",
-      "expected_output": "The evaluation rejects formulaic constructions such as 'the strange/important/unique/compelling part is not X; it is Y.' It explains that this manufactured setup-and-reveal pattern is an overused AI-writing tell and no longer creates the intended emphasis. A passing revision states the actual observation directly and naturally without replacing the setup with another hype word. For example: 'A source that understands how the child learns can shape information in a way that works for them.'",
-      "files": []
     }
   ]
 }

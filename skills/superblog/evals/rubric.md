@@ -103,3 +103,10 @@ Compression should reduce length while preserving the thesis, tension, mechanism
 ### 17. Specialized Output Compliance
 
 Image briefs, diagrams, and Substack HTML should be selected only when they reduce reader effort and should follow their mode-specific contracts. Visual output must clarify the argument rather than decorate the topic.
+
+### 18. Formulaic Emphasis
+
+Reject constructions such as "the strange/important/unique/compelling part is not X; it is Y." This setup-and-reveal pattern has become an AI-writing tell and no longer creates the intended emphasis. State the actual observation directly and naturally instead of replacing the setup with another evaluative or hype word.
+
+- **Rejected:** "The strange part is not that the child has a new source of information. It is that the source can answer as if it knows the child."
+- **Better:** "The source knows the child well enough to present information in a way they can learn from."

@@ -119,6 +119,13 @@
       "prompt": "This finished post explains a four-stage learning loop: collect customer traces, classify failures, change the product, and rerun the evaluation. Add the single visual artifact that would most reduce reader effort. Do not decorate the post.",
       "expected_output": "The skill should select diagram mode and produce one clear explanatory flow or lifecycle diagram, using the Superblog diagram contract. It should preserve the four stages and their sequence, avoid unrelated imagery or multiple decorative concepts, and include a readable fallback when required by the output format.",
       "files": []
+    },
+    {
+      "id": 18,
+      "name": "formulaic-emphasis",
+      "prompt": "Rewrite this without changing its meaning: The strange part is not that the child has a new source of information. It is that the source can answer as if it knows the child.",
+      "expected_output": "The revision should reject the formulaic 'the strange/important/unique/compelling part is not X; it is Y' setup. It should state the actual observation directly and naturally without replacing the setup with another evaluative or hype word. For example: 'The source knows the child well enough to present information in a way they can learn from.'",
+      "files": []
     }
   ]
 }
