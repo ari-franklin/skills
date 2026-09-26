@@ -1,0 +1,124 @@
+{
+  "skill_name": "superblog",
+  "evals": [
+    {
+      "id": 1,
+      "name": "abstraction-density",
+      "prompt": "Rewrite this for a product and engineering audience: The initiative increased organizational maturity and strategic alignment through enablement, capability building, and an improved operating model.",
+      "expected_output": "A concrete rewrite that names observable people, actions, decisions, or results. It should not simply replace one set of abstractions with another. Domain terms such as operating model may remain only when they are the precise subject and are explained through observable work.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "first-pass-comprehension",
+      "prompt": "Improve this sentence without losing its qualifications: Given the degree to which the existing review process, which was initially designed before AI pilots became common and which several teams interpret differently, creates friction, it suggests that this may require reconsideration before it scales.",
+      "expected_output": "A version an intended reader can understand on the first pass. It should have a clear subject and action, separate multiple main ideas when needed, resolve vague pronouns, and preserve the meaningful qualifications without a long runway or nested parentheticals.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "section-uniqueness",
+      "prompt": "Turn these notes into a weekly update with TL;DR, Completed, Started, Next week, and Metrics: Module 1 feedback showed the exercises were too abstract. We rewrote two exercises. The third is in progress and blocked on legal review. Next week we want five pilot users to complete the revised module. Current completion is 62%, down from 71%.",
+      "expected_output": "Each section should perform a different job. TL;DR states the central movement, tension, and implication without repeating every bullet. Completed contains verified movement, Started contains active work and blockers, Next week names observable intended outcomes, and Metrics reports the current measured state.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "headline-specificity",
+      "prompt": "Give me five clear headline options for a weekly update where Module 1 feedback showed that abstract exercises confused pilot users, forcing the team to rebuild the module before expanding the cohort.",
+      "expected_output": "Headlines should name the actual movement or tension, such as feedback forcing a rebuild before scale. They should avoid merely announcing importance, vague enablement language, generic topic labels, and cute wording that obscures the update.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "evidence-led-insight",
+      "prompt": "Turn this into a short product insight: Eight of twelve pilot users completed the task, but six opened the help panel first. Interviews showed they understood the goal but could not tell which data source the recommendation used. The team had assumed the citation icon was self-explanatory.",
+      "expected_output": "The reasoning should proceed from observation to tension to explanation to implication. The conclusion must follow the evidence instead of appearing as an unsupported declaration, and the practical implication should identify what decision or product change follows.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "competing-interpretation",
+      "prompt": "Write a short product lesson arguing that a drop in AI assistant usage after launch proves users do not trust the feature. Usage fell 18% in four weeks, while task completion time also fell by 25%.",
+      "expected_output": "The response should not treat distrust as proven. It should acknowledge the strongest reasonable alternative, including that users may need the assistant less because they complete the task faster, then explain what additional evidence would distinguish the interpretations. The alternative need not receive equal space.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "manufactured-certainty",
+      "prompt": "Rewrite this claim using only the evidence provided: One team cut planning time by 30% after introducing an AI planning assistant. This changes everything. Clearly, the future belongs to teams that automate planning, and the winners will adopt it now.",
+      "expected_output": "Confidence should be proportional to one team's result. The rewrite should remove universal predictions and certainty markers, distinguish observation from interpretation, and state what can reasonably be inferred and what remains unknown.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "human-voice",
+      "prompt": "Rewrite this in Ari's voice: We can leverage this ecosystem to unlock value, drive alignment, and maximize impact. At the end of the day, this capability is quietly transforming how leaders move the needle. It is not about tools, but about maturity.",
+      "expected_output": "Plainspoken, reflective prose with specific nouns and verbs. It should remove generic executive and AI language, artificial intrigue, the rhetorical three-part list, and the not-X-but-Y construction. It should sound like a practitioner thinking through real work rather than a polished corporate announcement.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "name": "rewrite-fidelity",
+      "prompt": "Edit for clarity without changing facts or confidence: On 14 September, Maya Chen said the checkout pilot reduced median review time from 11.4 minutes to 8.9 minutes across 126 sessions. She called the result promising, not conclusive, because 19 sessions required manual correction. Keep this link exactly: https://example.com/pilot-results. Recommendation: run a second pilot before rollout.",
+      "expected_output": "The edit must preserve the meaning, evidence, confidence, name and attribution, date, numbers, technical distinctions, link, formatting intent, and the separation between reported fact, interpretation, and recommendation. Any changed or invented fact is a hard failure.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "name": "ending-usefulness",
+      "prompt": "Write the ending for an article arguing that AI evals should connect to the product promise rather than exist as an isolated model score. The article has already explained acceptance criteria, customer evidence, deterministic tests, and semantic evaluation.",
+      "expected_output": "The ending should leave the reader with a decision, practical implication, testable question, next action, or concise principle supported by the article. It should sharpen the consequence without merely restating the opening more dramatically.",
+      "files": []
+    },
+    {
+      "id": 11,
+      "name": "mode-selection",
+      "prompt": "I keep noticing that teams call AI work an experiment even after customers depend on it. I am not sure whether that is a real article yet. Help me think it through.",
+      "expected_output": "The skill should choose incubate rather than prematurely drafting a full post. It should test the idea's tension, novelty, audience relevance, evidence, and possible thesis, and ask only for missing context that would materially change the direction.",
+      "files": []
+    },
+    {
+      "id": 12,
+      "name": "argument-depth",
+      "prompt": "Write a product-thinking post from this idea: Teams should focus on outcomes instead of outputs.",
+      "expected_output": "The response must move beyond the familiar slogan. It should develop a disagreeable thesis, name the reader tension and strongest opposing view, use a concrete example that explains a mechanism, identify a second-order consequence, and produce a practical implication that changes a decision. It should not invent the user's personal experience.",
+      "files": []
+    },
+    {
+      "id": 13,
+      "name": "grounded-opening",
+      "prompt": "Draft the opening of an article about why roadmap precision can create false confidence. Use a plausible workplace scenario, but do not claim it happened to me.",
+      "expected_output": "An inviting opening grounded in a clearly hypothetical or observed workplace moment. It should make the pressure or conflict visible, avoid a generic topic introduction or dense abstraction, and never invent first-person experience.",
+      "files": []
+    },
+    {
+      "id": 14,
+      "name": "paragraph-development",
+      "prompt": "Improve this paragraph: Product asks for speed. Engineering asks for clarity. Design asks for space. Leadership asks for certainty. Everyone gets a dashboard. Nobody gets a decision. This matters.",
+      "expected_output": "A developed paragraph that explains the mechanism or consequence instead of relying on repetitive mini-examples, one-sentence staging, a compressed aphoristic contrast, or the banned phrase 'this matters.' The revision should state the actual point in direct language and avoid manufacturing punchiness through sentence repetition.",
+      "files": []
+    },
+    {
+      "id": 15,
+      "name": "critique-quality",
+      "prompt": "Critique this opening and tell me how to improve it: In today's fast-paced world, product teams must leverage innovation to stay ahead. This is not about doing more, but about unlocking value. Alignment matters. Teams need transformation. The future belongs to adaptable organizations.",
+      "expected_output": "The critique should identify the highest-impact problems, explain why they weaken the opening, and propose concrete revision moves. It should cover generic framing, abstraction density, manufactured certainty, one-sentence body paragraphs, banned or generic language, and the not-X-but-Y construction without merely rewriting the passage or listing preferences.",
+      "files": []
+    },
+    {
+      "id": 16,
+      "name": "compression-without-flattening",
+      "prompt": "Compress this into one substantive paragraph while preserving its argument: Teams often treat an AI pilot as successful when the model's answer looks polished. That visual fluency can hide whether the answer helps someone make a better decision. A useful evaluation therefore has to connect the output to the product promise, the cost of error, and the context in which a person will act. A model score alone can improve while the workflow becomes slower or less trustworthy. The team should measure both model behavior and the user decision the feature is meant to improve.",
+      "expected_output": "A meaningfully shorter paragraph that preserves the central tension, causal reasoning, confidence, distinction between model quality and product quality, and practical implication. It should not reduce the argument to a generic slogan or replace precise language with executive shorthand.",
+      "files": []
+    },
+    {
+      "id": 17,
+      "name": "specialized-output-selection",
+      "prompt": "This finished post explains a four-stage learning loop: collect customer traces, classify failures, change the product, and rerun the evaluation. Add the single visual artifact that would most reduce reader effort. Do not decorate the post.",
+      "expected_output": "The skill should select diagram mode and produce one clear explanatory flow or lifecycle diagram, using the Superblog diagram contract. It should preserve the four stages and their sequence, avoid unrelated imagery or multiple decorative concepts, and include a readable fallback when required by the output format.",
+      "files": []
+    }
+  ]
+}

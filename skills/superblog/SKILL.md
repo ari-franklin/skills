@@ -124,8 +124,8 @@ This is required even if the user only asked for a draft — the reasoning route
 14. State the positive claim directly. Avoid "not that, it's this" constructions, including patterns like "the hard part is not X, it is Y," "the work is not X, it is Y," "this is not X, it is Y," "it is not about X, it is about Y," and "not because X, but because Y." Do not include this phrasing in shared drafts or final outputs. Use the negative case only when the reader's misconception is the actual tension being examined, and keep it brief.
 15. Avoid paragraphs built from repetitive mini-examples or descriptive sequences that do not advance the reasoning. A run of simple subject-verb sentences does not become compelling through accumulation, and separating statements with periods does not make them more forceful. Prefer one example that reveals the mechanism or consequence. End the paragraph by stating the point in literal language; do not rely on a compressed contrast or aphoristic pair that forces the reader to invent the connection. If the paragraph adds no reasoning beyond its examples, simplify it or delete it instead of polishing it.
 16. Preserve human-shaped language. Keep the user's distinctive nouns, verbs, odd turns of phrase, and domain-specific vocabulary when they sharpen meaning. Do not average the prose into safe, smooth, generic wording. Weird is useful when it is precise.
-17. Keep language simple and thoughtful instead of overly declarative. Prefer first-person exploration, grounded advice, and "here is how I am thinking about it" over black-and-white declarations like "this is," "this is not," and "this is why."
-18. Do not use the phrases "this matters," "this is useful," "has to earn," "earns its place," "idea carrying," or "carrying the idea." Avoid applying physical verbs such as "carry" and "earn" to ideas, sentences, arguments, evidence, or other inanimate abstractions unless the literal meaning applies. Replace them with direct language that says what the sentence means, what changed, or why the reader should care.
+17. Use simple language and as few words as the idea allows. Do not over-intellectualize a simple point or make it sound more sophisticated than it is. Prefer short, common words over abstract or technical ones, and avoid stacking several abstract nouns in one sentence. If a sentence needs to be decoded, rewrite it in the plainest literal form. Keep the tone thoughtful and use first-person exploration where appropriate.
+18. Do not use the phrases "this matters," "this is useful," "has to earn," "earns its place," "idea carrying," or "carrying the idea." Use "carry," "earn," and "deserve" only in their literal sense. Do not apply them to ideas, sentences, arguments, evidence, actions, or other inanimate abstractions. Replace them with direct language that says what the sentence means, what changed, or what should happen.
 
 ## Always Run These Style Checks
 
@@ -140,6 +140,8 @@ Every time this skill critiques, rewrites, drafts, compresses, or concludes a po
 - Does every example paragraph reveal a mechanism or consequence, and does its ending state the meaning literally instead of gesturing at it through a compressed contrast?
 - Did you remove repetitive sentence patterns that manufacture punchiness without adding reasoning?
 - Did you replace metaphorical verbs attached to abstract subjects with literal language when the metaphor makes the reader interpret the intended meaning?
+- Could any sentence use fewer, smaller, or more common words without losing its meaning?
+- Am I making a simple point sound more complex than it is?
 - Did you preserve short clear sections when they work, instead of padding them into long paragraphs for polish?
 
 ## Workflow
@@ -322,3 +324,12 @@ When writing a complete post, include:
 - A short revision note listing the two or three biggest improvement opportunities
 
 Before returning any complete post, critique, compression, or rewritten section, confirm internally that the always-run style checks passed. If a check fails, revise the output before showing it.
+
+## Evaluation And Maintenance
+
+When changing Superblog instructions, models, references, or output contracts, use:
+
+- `evals/evals.json`: realistic regression cases covering the core writing criteria and Superblog-specific behaviors
+- `evals/rubric.md`: scoring guidance, hard gates, and pass thresholds for judging those cases
+
+Run the relevant cases after a change and compare results against the rubric. Do not load the eval suite during ordinary blog work; the Core Rules and Always Run These Style Checks remain the runtime guidance.
