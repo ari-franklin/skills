@@ -1,0 +1,23 @@
+{
+  "skill_name": "bet-statements",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a bet statement: We want a monthly peer demo session where analysts show how they use AI for their real reporting work. The aim is for less experienced analysts to adopt useful workflows and spend less time creating repetitive reports. We can observe whether attendees reuse demos and whether report turnaround time changes.",
+      "expected_output": "One four-part bet statement that treats the demo session as the intervention, names adoption and reporting speed as outcomes, supplies a peer-learning mechanism, and uses reuse plus turnaround time as evidence.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Sharpen this bet without inventing numbers: We believe creating an onboarding guide will result in better onboarding because it helps new engineers. We'll know it works when people like it.",
+      "expected_output": "An improved four-part statement or a focused clarifying question. It should distinguish the guide from the intended onboarding outcome, make the mechanism specific, and replace the vague satisfaction-only signal with observable onboarding evidence without making up metrics.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Create a bet statement from this context: A pilot will add a local context file to two repositories so coding agents and developers can find conventions and current decisions in the workspace. We expect fewer repeated explanations and fewer corrections to generated changes. We have no agreed way to measure adoption or correction frequency yet.",
+      "expected_output": "A four-part statement with a labeled assumption or a compact question about the missing evidence. It must not fabricate a metric or claim that measurement is already established.",
+      "files": []
+    }
+  ]
+}
