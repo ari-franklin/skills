@@ -1,6 +1,6 @@
 ---
 name: mr-roadmap
-description: Globally invokable as $mr-roadmap. Use when creating, reshaping, critiquing, or validating a roadmap from notes, documents, issues, plans, metrics, decisions, risks, assumptions, dependencies, or repo context. Use for outcome roadmaps, strategy choice maps, milestones and markers, opportunity/solution trees, portfolio bets, Now/Next/Later roadmaps, quarterly or annual roadmaps, and visual HTML roadmap artifacts that help an audience decide what to do next, defer, commit to, or validate.
+description: Globally invokable as $mr-roadmap. Use for any request to view, update, prioritize, sequence, or report progress on the user’s roadmap, including phrases like “what’s my roadmap?” or “I just shipped X.” Use when creating, reshaping, critiquing, or validating a roadmap from notes, documents, issues, plans, metrics, decisions, risks, assumptions, dependencies, or repo context. Use for outcome roadmaps, strategy choice maps, milestones and markers, opportunity/solution trees, portfolio bets, Now/Next/Later roadmaps, quarterly or annual roadmaps, and visual HTML roadmap artifacts that help an audience decide what to do next, defer, commit to, or validate.
 license: MIT
 metadata:
   author: arifranklin
@@ -31,6 +31,7 @@ Load `references/html-patterns.md` when the user asks for a visual roadmap, HTML
 
 Use this skill when the user asks to:
 
+- View, update, prioritize, sequence, or report progress on the user's roadmap
 - Create, update, synthesize, critique, or explain a roadmap
 - Turn messy source material into a roadmap
 - Decide between roadmap formats
@@ -38,6 +39,28 @@ Use this skill when the user asks to:
 - Make uncertainty, assumptions, risks, dependencies, or validation needs visible
 - Convert initiatives, problems, issues, plans, OKRs, metrics, customer evidence, or decisions into an actionable planning artifact
 - Export a roadmap as a visual HTML file
+
+Invoke this skill for natural-language roadmap queries and status updates even when the user does not explicitly say "use RMP" or "$mr-roadmap". Trigger examples include:
+
+- "What's my roadmap?"
+- "Show me my roadmap."
+- "Where am I on my roadmap?"
+- "What should I work on next?"
+- "I just published/shipped/completed X."
+- "X is done."
+- "Move X to complete."
+- "Add X to my roadmap."
+- "I'm thinking about doing X next."
+- Requests to change sequencing, such as reordering X and Y or changing what comes next
+
+When invoked, treat the roadmap artifact as the source of truth. Read the current artifact before answering. If the user reports a change in status, priority, sequencing, scope, or a new roadmap item, persist the update to the artifact first and then answer from the updated roadmap. Do not reconstruct the roadmap from conversation history or answer with a conversational approximation when the roadmap artifact is available.
+
+A roadmap-related statement can be both an update and a query. For example, "I just published X. What's my roadmap?" means:
+
+1. Mark X appropriately in the roadmap.
+2. Persist that change to the roadmap artifact.
+3. Read the resulting roadmap state.
+4. Show the user what is current and what comes next.
 
 Do not use for generic task lists, project schedules, or delivery plans unless the user wants roadmap-level judgment.
 
