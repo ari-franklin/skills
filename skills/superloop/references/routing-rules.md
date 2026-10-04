@@ -114,3 +114,16 @@ Examples:
 - Clear claim needing a confidence check: Validate
 - Clear large target needing structure: Decompose
 - Clear priority call needing risk review: Prioritize -> Validate
+
+## Source Diagnosis Handoff
+
+If the input is an existing diagnosis, treat the diagnosis as source material rather than re-running it.
+
+For a COM-B diagnosis, Phase A summary, or practitioner worksheet:
+
+- load `references/com-b-handoff-contract.md`
+- preserve the COM-B behavior definition and findings
+- route to the smallest action-translation path that makes the next move clear
+- default to Explain -> Decompose -> Prioritize -> Validate when the user asks what to do next
+
+Return to COM-B instead of routing through Superloop when actor, action, or extent is missing from the behavior definition.

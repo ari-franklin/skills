@@ -119,3 +119,21 @@ Good when the priority frame is unclear:
 Explain -> Prioritize -> Validate
 
 Use this before major investment or execution.
+
+## Rule 7
+
+COM-B diagnosis before Superloop action translation.
+
+When source material is a COM-B diagnosis, do not re-diagnose the behavior. Treat COM-B as the explanation source and use Superloop to translate it into a decision.
+
+Default route:
+
+Explain -> Decompose -> Prioritize -> Validate
+
+Use shorter routes when:
+
+- candidate actions are already defined: Explain -> Prioritize -> Validate
+- the causal story is already clear: Decompose -> Prioritize -> Validate
+- the user asks only whether a specific COM-B-derived plan holds up: Validate
+
+If the COM-B behavior definition is incomplete, return to COM-B Step 1 before sequencing Superloop modes.

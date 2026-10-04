@@ -47,3 +47,16 @@ The user receives:
 - more decomposition
 
 without a better decision.
+
+## COM-B Handoff Stop Conditions
+
+When translating a COM-B diagnosis, stop when the user has:
+
+- the causal story in plain language
+- the first action or bet
+- what should wait
+- what not to do yet
+- an observable success signal
+- confidence and key assumptions
+
+Do not keep unpacking COM-B dimensions or BCTs once the next action decision is clear.

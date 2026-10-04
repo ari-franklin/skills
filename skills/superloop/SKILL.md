@@ -72,6 +72,7 @@ Load these references as needed:
 - `references/output-contract.md`: final response structure
 - `references/html-output-contract.md`: optional static HTML decision dossier structure
 - `references/visual-reasoning.md`: optional visual explanation layer for sequences, comparisons, relationships, and decision artifacts
+- `references/com-b-handoff-contract.md`: how to translate a COM-B diagnosis into a focused Superloop action decision
 
 ## Core Rule
 
@@ -136,6 +137,9 @@ Common paths:
 - `Explain -> Prioritize -> Decompose`
 - `Explain -> Decompose -> Prioritize`
 - `Explain -> Prioritize -> Validate`
+- `Explain -> Decompose -> Prioritize -> Validate`
+
+When the source material is a COM-B diagnosis, Phase A summary, or practitioner worksheet, load `references/com-b-handoff-contract.md`. Use COM-B as the diagnostic source and Superloop as the action-translation layer. Do not re-diagnose the behavior from scratch.
 
 ## Workflow
 
