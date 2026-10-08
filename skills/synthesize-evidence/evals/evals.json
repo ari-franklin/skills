@@ -1,0 +1,23 @@
+{
+  "skill_name": "synthesize-evidence",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a daily evidence synthesis for 2026-10-07. Sources: Priya's 09:10 update: 'The checkout recovery fix shipped to 10% of traffic.' Release dashboard: error rate fell from 3.8% to 2.1% after the rollout, but it notes the comparison covers only 45 minutes. Diego's 15:00 note says two stores still see duplicate receipts and links no logs. There is no prior accepted synthesis.",
+      "expected_output": "A small daily set of proposed review candidates. It distinguishes the shipped activity from the short-window error-rate signal, preserves the duplicate-receipt minority signal, assigns evidence-specific confidence, does not call the rollout successful, and identifies what Ari should review or what evidence is needed next.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Write a weekly evidence synthesis for Oct 1-7. Accepted daily items say support contacts about delayed pickup fell in three consecutive daily samples, while a previous weekly synthesis said the new notification flow had no measurable effect. This week's sources: contact-volume dashboard shows 18%, 14%, and 16% decreases versus the matched weekday baseline; the analytics owner says the query excludes phone contacts; a support lead says phone complaints feel unchanged. The team explicitly decided to keep the pilot running another week.",
+      "expected_output": "A weekly comparison that describes the pattern as strengthening or new only with the coverage limitation, keeps the phone-contact contradiction visible, records the attributed explicit decision, distinguishes it from inferred success, and names what would change the view.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Synthesize this daily source for Oct 7: Project lead wrote, 'I think the onboarding guide is finally fixing ramp-up.' The guide was published yesterday. One new hire said it was helpful. No prior accepted items or metrics are provided.",
+      "expected_output": "A proposed item that labels the lead's wording as an attributed exact excerpt only if reproduced verbatim, classifies the published guide as an artifact or activity and the ramp-up claim as an assumption or low-confidence signal, avoids promoting a learning or decision, and asks for a time window or evidence that could test the interpretation if needed.",
+      "files": []
+    }
+  ]
+}
